@@ -83,7 +83,7 @@ public class testing
 		new edge(new mpoint(662,202),new mpoint(700,199),25);
 		new edge(new mpoint(700,199),new mpoint(808,178),25);
 		new edge(new mpoint(808,178),new mpoint(842,172),25);
-		new edge(new mpoint(842,172),new mpoint(987,150),25);
+		new edge(new mpoint(842,172),new mpoint(987,105),25);
 		new edge(new mpoint(631,145),new mpoint(633,197),15);
 		new edge(new mpoint(660,144),new mpoint(662,202),15);
 		new edge(new mpoint(690,142),new mpoint(700,199),15);
@@ -117,7 +117,7 @@ public class testing
 		new edge(new mpoint(90,402),new mpoint(110,505),20);
 		new edge(new mpoint(110,505),new mpoint(1,540),25);
 		new edge(new mpoint(110,505),new mpoint(160,492),25);
-		new edge(new mpoint(160,492),new mpoint(156,435),20);
+		new edge(new mpoint(160,492),new mpoint(154,435),20);
 		new edge(new mpoint(156,435),new mpoint(150,381),20);
 		new edge(new mpoint(156,435),new mpoint(242,418),25);
 		new edge(new mpoint(242,418),new mpoint(249,472),25);
@@ -128,24 +128,26 @@ public class testing
 		new edge(new mpoint(299,446),new mpoint(329,525),25);
 		new edge(new mpoint(329,525),new mpoint(266,548),25);
 		new edge(new mpoint(266,548),new mpoint(249,472),25);
-		new edge(new mpoint(160,492),new mpoint(208,484),25);
-		new edge(new mpoint(249,472),new mpoint(208,484),25);
+		new edge(new mpoint(160,492),new mpoint(203,484),25);
+		new edge(new mpoint(249,472),new mpoint(203,484),25);
 		new edge(new mpoint(110,505),new mpoint(126,602),20);
-		new edge(new mpoint(93,626),new mpoint(120,602),25);
+		new edge(new mpoint(93,626),new mpoint(126,602),25);
 		new edge(new mpoint(93,626),new mpoint(1,686),25);
 		new edge(new mpoint(93,626),new mpoint(101,702),25);
 		new edge(new mpoint(140,704),new mpoint(126,602),20);
 		new edge(new mpoint(160,492),new mpoint(167,555),20);
 		new edge(new mpoint(145,560),new mpoint(167,555),15);
-		new edge(new mpoint(145,560),new mpoint(160,650),15);
-		new edge(new mpoint(181,642),new mpoint(160,650),15);
+		new edge(new mpoint(145,560),new mpoint(155,650),15);
+		new edge(new mpoint(181,642),new mpoint(155,650),15);
 		new edge(new mpoint(181,642),new mpoint(167,555),20);
 		new edge(new mpoint(181,642),new mpoint(191,703),20);
-		new edge(new mpoint(168,703),new mpoint(160,650),15);
-		new edge(new mpoint(130,659),new mpoint(160,650),15);
-		new edge(new mpoint(208,484),new mpoint(160,492),15);
-		new edge(new mpoint(208,484),new mpoint(249,472),15);
-		new edge(new mpoint(208,484),new mpoint(229,683),20);
+		new edge(new mpoint(158,703),new mpoint(155,650),15);
+		new edge(new mpoint(130,704),new mpoint(130,659),15);
+		new edge(new mpoint(130,659),new mpoint(155,650),15);
+		
+		new edge(new mpoint(203,484),new mpoint(160,492),15);
+		new edge(new mpoint(203,484),new mpoint(249,472),15);
+		new edge(new mpoint(203,484),new mpoint(229,683),20);
 		new edge(new mpoint(231,701),new mpoint(229,683),20);
 		new edge(new mpoint(292,664),new mpoint(229,683),20);
 		new edge(new mpoint(292,664),new mpoint(266,548),25);
@@ -169,10 +171,10 @@ public class testing
 		new edge(new mpoint(485,415),new mpoint(454,363),25);
 		new edge(new mpoint(485,415),new mpoint(416,449),25);
 		new edge(new mpoint(485,415),new mpoint(544,526),25);
-		new edge(new mpoint(578,608),new mpoint(544,526),25);
+		new edge(new mpoint(578,600),new mpoint(544,526),25);
 		new edge(new mpoint(454,569),new mpoint(544,526),25);
-		new edge(new mpoint(578,608),new mpoint(464,654),25);
-		new edge(new mpoint(578,608),new mpoint(629,695),25);
+		new edge(new mpoint(578,600),new mpoint(464,654),25);
+		new edge(new mpoint(578,600),new mpoint(629,695),25);
 		new edge(new mpoint(430,313),new mpoint(454,363),25);
 		new edge(new mpoint(489,310),new mpoint(612,491),25);
 		new edge(new mpoint(653,561),new mpoint(612,491),25);
@@ -183,7 +185,7 @@ public class testing
 		new edge(new mpoint(612,491),new mpoint(656,465),25);
 		new edge(new mpoint(670,356),new mpoint(695,446),15);
 		new edge(new mpoint(695,446),new mpoint(656,465),25);
-		new edge(new mpoint(695,446),new mpoint(736,421),25);
+		new edge(new mpoint(695,446),new mpoint(741,421),25);
 		new edge(new mpoint(716,356),new mpoint(741,421),15);
 		new edge(new mpoint(764,457),new mpoint(741,421),15);
 		new edge(new mpoint(764,457),new mpoint(797,487),15);
@@ -221,12 +223,14 @@ public class testing
 		new edge(new mpoint(1006,440),new mpoint(974,484),15);
 		new edge(new mpoint(939,465),new mpoint(974,484),15);
 		new edge(new mpoint(931,405),new mpoint(1004,377),15);
-		new edge(new mpoint(915,350),new mpoint(915,350),15);
+		new edge(new mpoint(915,350),new mpoint(1001,320),15);
 		
 		System.out.println(edge_point.allitem.size());
 		
 		/*醫뚰몴 李띿뼱�꽌 踰꾩뒪 �끂�꽑留뚮뱾湲�, �젙瑜섏옣�씠硫� true, �븘�땲硫� false*/
 		/*�끂�옉�깋 �끂�꽑�엫*/
+		
+		/*
 		BusRoute yellow = new BusRoute(Color.RED,5, 300, 60);
 		yellow.AddPoint(new mpoint(0,0), true);
 		yellow.AddPoint(new mpoint(40,91), true);
@@ -244,7 +248,7 @@ public class testing
 		yellow.AddPoint(new mpoint(857,326), true);
 		yellow.AddPoint(new mpoint(892,302), true);
 		yellow.AddPoint(new mpoint(996,238), true);
-		/*
+		
 		
 		BusRoute brown = new BusRoute(new Color(0,255,255),5, 300, 60);
 		brown.AddPoint(new mpoint(1,369), true);
@@ -289,6 +293,7 @@ public class testing
 		
 		BusRoute blue = new BusRoute(new Color(255,100,255),5, 300, 60);
 		blue.AddPoint(new mpoint(863,7), true);
+		blue.AddPoint(new mpoint(870,29), true);
 		blue.AddPoint(new mpoint(811,41), true);
 		blue.AddPoint(new mpoint(780,42), true);
 		blue.AddPoint(new mpoint(677,48), true);
@@ -329,7 +334,7 @@ public class testing
 		green.AddPoint(new mpoint(292,664), true);
 		green.AddPoint(new mpoint(229,683), true);
 		green.AddPoint(new mpoint(231,701), true);
-		
+		*/
 			
 		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 300, 60);
 		Darkgreen.AddPoint(new mpoint(0,439), true);
@@ -346,7 +351,7 @@ public class testing
 		Darkgreen.AddPoint(new mpoint(578,600), true);
 		Darkgreen.AddPoint(new mpoint(629,695), true);
 		
-		
+		/*
 		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 300, 60);
 		Dark.AddPoint(new mpoint(1,686), true);
 		Dark.AddPoint(new mpoint(93,626), true);
@@ -423,10 +428,10 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(793,693), true);
 		
 		
-		
-		
-		
 		*/
+		
+		
+		
 		
 		
 		
