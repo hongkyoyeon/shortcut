@@ -28,14 +28,6 @@ public class PaintToolFrame extends JComponent{
 		g2.setColor(color);
         g2.drawLine(x,y,x2,y2);
 	}
-	public void PointDraw(int x, int y,int size)
-	{
-		Stroke stroke = new BasicStroke( size+2 ,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
-		g2.setStroke(stroke);
-        g2.setColor(new Color(244,255,255));
-        g2.drawLine(x,y,x,y);
-	}
-	
 	public void drawLine(edge e)
 	{
 		drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y,e.size);
@@ -48,14 +40,11 @@ public class PaintToolFrame extends JComponent{
 		for(edge e : edge.allitem) {
 			drawLine(e);
 		}
-
+		
 		offset_size = 0;
 		color = new Color(255,255,255);
 		for(edge e : edge.allitem) {
 			drawLine(e);
-		}
-		for(edge_point e : edge_point.allitem.values()) {
-			//PointDraw(e.point.x,e.point.y,e.size);
 		}
 	}
 	

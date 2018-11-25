@@ -10,6 +10,7 @@ public class BusObject extends JComponent{
 	public BusObject()
 	{
 		setSize(50, 50);
+		setToolTipText("A");
 		
 	}
 	public void paintComponent(Graphics g)

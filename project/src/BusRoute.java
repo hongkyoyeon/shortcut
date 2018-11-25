@@ -13,10 +13,12 @@ public class BusRoute {
 		this.StartTime = starttime;
 		this.EndTime = endtime;
 		this.BusInterval = businterval;
-		// ¹ö½º ÁØºñÇÏ±â
+		// ë²„ìŠ¤ë¥¼ ë¯¸ë¦¬ ë§Œë“¤ì–´ë‘”ë‹¤. 
+
 		for(int time = StartTime;time <= EndTime;time += BusInterval)
 		{
 			double wheremove = time - StartTime;
+			System.out.println("ë²„ìŠ¤ : " + wheremove + " ë’¤ì— ì¶œë°œ");
 			Bus bus = new Bus(this,wheremove);
 			Buses.add(bus);
 		}
@@ -25,7 +27,7 @@ public class BusRoute {
 	{
 		Map<mpoint,Boolean> aMap = Collections.singletonMap(Point,StopPoint);
 		Path.add(aMap);
-		// ¸¸¾à Ãß°¡ÇÏ´Â Á¡ÀÌ Á¤·ùÀåÀÏ°æ¿ì Á¤·ùÀå¿¡ ÀÌ °´Ã¼¸¦ Ãß°¡ÇÑ´Ù.
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½å¿¡ ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
 		if (StopPoint == true)
 		{
 			BusStop stop = BusStop.GetObject(Point);
@@ -35,6 +37,6 @@ public class BusRoute {
 	public void SetRoundTrip()
 	{
 		RoundTrip = true;
-		// ¿Õº¹ ¹ö½º »ý¼º
+		// ï¿½Õºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	}
 }

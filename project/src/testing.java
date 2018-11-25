@@ -219,7 +219,7 @@ public class testing
 		
 		System.out.println(edge_point.allitem.size());
 		
-		BusRoute route = new BusRoute(5, 300, 60);
+		BusRoute route = new BusRoute(5, 300, 200);
 		route.AddPoint(new mpoint(217,137), true);
 		route.AddPoint(new mpoint(244,266), true);
 		route.AddPoint(new mpoint(337,257), false);
@@ -230,7 +230,7 @@ public class testing
 		route.AddPoint(new mpoint(340,145), false);
 		route.AddPoint(new mpoint(217,137), true);
 		
-		// ¹ö½º ³ë¼± Ãß°¡
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ë¼± ï¿½ß°ï¿½
 		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		
