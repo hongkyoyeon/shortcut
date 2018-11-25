@@ -131,9 +131,9 @@ public class testing
 		new edge(new mpoint(160,492),new mpoint(203,484),25);
 		new edge(new mpoint(249,472),new mpoint(203,484),25);
 		new edge(new mpoint(110,505),new mpoint(126,602),20);
-		new edge(new mpoint(93,626),new mpoint(126,602),25);
-		new edge(new mpoint(93,626),new mpoint(1,686),25);
-		new edge(new mpoint(93,626),new mpoint(101,702),25);
+		new edge(new mpoint(93,626),new mpoint(126,602),20);
+		new edge(new mpoint(93,626),new mpoint(1,686),20);
+		new edge(new mpoint(93,626),new mpoint(101,702),20);
 		new edge(new mpoint(140,704),new mpoint(126,602),20);
 		new edge(new mpoint(160,492),new mpoint(167,555),20);
 		new edge(new mpoint(145,560),new mpoint(167,555),15);
@@ -230,7 +230,7 @@ public class testing
 		/*醫뚰몴 李띿뼱�꽌 踰꾩뒪 �끂�꽑留뚮뱾湲�, �젙瑜섏옣�씠硫� true, �븘�땲硫� false*/
 		/*�끂�옉�깋 �끂�꽑�엫*/
 		
-		/*
+		
 		BusRoute yellow = new BusRoute(Color.RED,5, 300, 60);
 		yellow.AddPoint(new mpoint(0,0), true);
 		yellow.AddPoint(new mpoint(40,91), true);
@@ -272,7 +272,7 @@ public class testing
 		red.AddPoint(new mpoint(455,142), true);
 		red.AddPoint(new mpoint(527,146), true);
 		red.AddPoint(new mpoint(633,197), true);
-		red.AddPoint(new mpoint(622,202), true);
+		red.AddPoint(new mpoint(662,202), true);
 		red.AddPoint(new mpoint(700,199), true);
 		red.AddPoint(new mpoint(808,178), true);
 		red.AddPoint(new mpoint(842,172), true);
@@ -334,7 +334,7 @@ public class testing
 		green.AddPoint(new mpoint(292,664), true);
 		green.AddPoint(new mpoint(229,683), true);
 		green.AddPoint(new mpoint(231,701), true);
-		*/
+		
 			
 		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 300, 60);
 		Darkgreen.AddPoint(new mpoint(0,439), true);
@@ -351,7 +351,7 @@ public class testing
 		Darkgreen.AddPoint(new mpoint(578,600), true);
 		Darkgreen.AddPoint(new mpoint(629,695), true);
 		
-		/*
+		
 		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 300, 60);
 		Dark.AddPoint(new mpoint(1,686), true);
 		Dark.AddPoint(new mpoint(93,626), true);
@@ -428,7 +428,7 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(793,693), true);
 		
 		
-		*/
+		
 		
 		
 		
