@@ -24,7 +24,7 @@ public class Bus extends GameObject {
 		double d = edge_data.distance;
 		BusSpeed =  6 / edge_data.distance;
 	}
-	public void Update() //踰꾩뒪�뒗 怨꾩냽 �떆�옉�씠 吏��굹硫댁꽌 ��吏곸뿬�빞 �븯�땲源� gameobject�븯硫� �굹���굹�뒗 �븿�닔 以묒뿉�꽌 update�븿�닔 �궗
+	public void Update() // 1/60초에 한번씩 갱신되는 함수
 	{
 		if (WhereMove < 0) //留뚯빟 �븵�뿉�꽌 start瑜� 120�쑝濡� �꽕�젙�뻽�떎硫� �뿬湲곗꽌�뒗 -120�쑝濡� �꽕�젙�릺硫댁꽌 0蹂대떎 而ㅼ쭏�뻹 踰꾩뒪媛� �깮�꽦�뤌�꽌 ��吏곸씠�뒗嫄곗엫
 		//	0蹂대떎 �옉�쓣�븣�뒗 +1�뵫 �빐
