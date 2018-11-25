@@ -19,12 +19,12 @@ public class BusRoute {
 		this.StartTime = starttime;
 		this.EndTime = endtime;
 		this.BusInterval = businterval;
-		// 버스를 미리 만들어둔다. 
-		/*시작시간 60, 중간시간 10 이면 먼저 60초 후 출발하는 버스 만들어 놓고 그후에 10초 있다가 출발하는 버스도 미리 설정해놓기*/
+		// 踰꾩뒪瑜� 誘몃━ 留뚮뱾�뼱�몦�떎. 
+		/*�떆�옉�떆媛� 60, 以묎컙�떆媛� 10 �씠硫� 癒쇱� 60珥� �썑 異쒕컻�븯�뒗 踰꾩뒪 留뚮뱾�뼱 �넃怨� 洹명썑�뿉 10珥� �엳�떎媛� 異쒕컻�븯�뒗 踰꾩뒪�룄 誘몃━ �꽕�젙�빐�넃湲�*/
 		for(int time = StartTime;time <= EndTime;time += BusInterval)
 		{
 			double wheremove = time - StartTime;
-			System.out.println("버스 : " + wheremove + " 뒤에 출발");
+			System.out.println("22 : " + wheremove + " �뮘�뿉 異쒕컻");
 			Bus bus = new Bus(this,wheremove);
 			Buses.add(bus);
 		}
@@ -44,6 +44,6 @@ public class BusRoute {
 	public void SetRoundTrip()
 	{
 		RoundTrip = true;
-		// �պ� ���� ����
+		// 占쌌븝옙 占쏙옙占쏙옙 占쏙옙占쏙옙
 	}
 }
