@@ -3,9 +3,11 @@ import java.awt.*;
 public class testing
 
 {
+	public static JFrame aframe;
 	public static void main(String[] args)
 	{
 		JFrame frame =new JFrame();
+		aframe = frame;
 		final int width =990;
 		final int height =715;
 		frame.setSize(width,height);
@@ -216,17 +218,37 @@ public class testing
 		new edge(new mpoint(915,350),new mpoint(915,350),15);
 		
 		System.out.println(edge_point.allitem.size());
-		new edge(new mpoint(0, 0),new mpoint(40, 91),10);
-		new edge(new mpoint(0, 0),new mpoint(40, 91),10);
 		
-	
+		BusRoute route = new BusRoute(5, 300, 60);
+		route.AddPoint(new mpoint(217,137), true);
+		route.AddPoint(new mpoint(244,266), true);
+		route.AddPoint(new mpoint(337,257), false);
+		route.AddPoint(new mpoint(413,267), false);
+		route.AddPoint(new mpoint(497,274), true);
+		route.AddPoint(new mpoint(527,146), true);
+		route.AddPoint(new mpoint(455,142), false);
+		route.AddPoint(new mpoint(340,145), false);
+		route.AddPoint(new mpoint(217,137), true);
+		
+		// 버스 노선 추가
+		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		
 		frame.add(component);
 		frame.setVisible(true);
 		
 		
-		
+		while(true)
+		{
+			try
+			{
+			Thread.sleep(16);
+			} catch (InterruptedException e)
+			{
+				
+			}
+			GameObject.NextFrame();
+		}
 		
 		
 		

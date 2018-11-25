@@ -10,7 +10,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
-public class PaintToolFrame  extends JComponent{
+public class PaintToolFrame extends JComponent{
 	Color color;
 	int offset_size = 0;
 	
