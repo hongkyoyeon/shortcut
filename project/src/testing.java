@@ -242,7 +242,7 @@ public class testing
 		yellow.AddPoint(new mpoint(996,238), true);
 		
 		
-		BusRoute brown = new BusRoute(Color.GREEN,5, 300, 60);
+		BusRoute brown = new BusRoute(new Color(0,255,255),5, 300, 60);
 		brown.AddPoint(new mpoint(1,369), true);
 		brown.AddPoint(new mpoint(113,307), true);
 		brown.AddPoint(new mpoint(173,286), true);
