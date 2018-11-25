@@ -11,16 +11,16 @@ public class Bus extends GameObject {
 		this.Route = route;
 		this.WhereMove = -start - 1;
 		System.out.println(this.WhereMove);
-	}	
-	
-	public void Update()
+	}
+	public void Update() //버스는 계속 시작이 지나면서 움직여야 하니깐 gameobject하면 나타나는 함수 중에서 update함수 사
 	{
-		if (WhereMove < 0) 
+		if (WhereMove < 0) //만약 앞에서 start를 120으로 설정했다면 여기서는 -120으로 설정되면서 0보다 커질떄 버스가 생성돼서 움직이는거임
+		//	0보다 작을때는 +1씩 해
 		{
 			WhereMove += 1;
 			if (WhereMove >= 0)
 			{
-				component = new BusObject();
+				component = new BusObject(); 
 				Map<mpoint,Boolean> aa = Route.Path.get(0);
 				mpoint p = (mpoint)(aa.keySet().toArray())[0];
 				System.out.println("버스 출발" + p.x + "  " + p.y);
@@ -34,9 +34,9 @@ public class Bus extends GameObject {
 		{
 			// 내가 정류장을 지나갔는지 확인
 			int last = (int)WhereMove;
-			WhereMove += 0.01;
+			WhereMove += 0.01;//속도 조절 0.1을 하면 버스가빨리 움직
 			int now = (int)WhereMove;
-			if (last != now)
+			if (last != now)//지금 버스가 0.999인데 0.1씩 증가한다고 하면 정거장에 안멈추니깐 근데 버스는 멈춰야 하니깐 이걸 체해줘야
 			{
 				System.out.println("교차로 지남");
 			}
@@ -53,6 +53,7 @@ public class Bus extends GameObject {
 			double detail = WhereMove - (int)WhereMove;
 			// ���� ����
 
+			
 			Map<mpoint,Boolean> aa = Route.Path.get(last);
 			mpoint last_p = (mpoint)(aa.keySet().toArray())[0];
 			aa = Route.Path.get(now);

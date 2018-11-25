@@ -3,9 +3,11 @@ import java.awt.*;
 public class testing
 
 {
+	
 	public static JFrame aframe;
 	public static void main(String[] args)
 	{
+		
 		JFrame frame =new JFrame();
 		aframe = frame;
 		final int width =990;
@@ -219,10 +221,11 @@ public class testing
 		
 		System.out.println(edge_point.allitem.size());
 		
-		BusRoute route = new BusRoute(5, 300, 200);
-		route.AddPoint(new mpoint(217,137), true);
-		route.AddPoint(new mpoint(244,266), true);
-		route.AddPoint(new mpoint(337,257), false);
+		/*좌표 찍어서 버스 노선만들기, 정류장이면 true, 아니면 false*/
+		BusRoute route = new BusRoute(5, 300, 60);
+		route.AddPoint(new mpoint(0,0), true);
+		route.AddPoint(new mpoint(40,91), true);
+		route.AddPoint(new mpoint(64,174), false);
 		route.AddPoint(new mpoint(413,267), false);
 		route.AddPoint(new mpoint(497,274), true);
 		route.AddPoint(new mpoint(527,146), true);
@@ -230,7 +233,9 @@ public class testing
 		route.AddPoint(new mpoint(340,145), false);
 		route.AddPoint(new mpoint(217,137), true);
 		
-		// ���� �뼱 �߰�
+		
+		
+		
 		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		

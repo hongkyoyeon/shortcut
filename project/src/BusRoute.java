@@ -14,7 +14,7 @@ public class BusRoute {
 		this.EndTime = endtime;
 		this.BusInterval = businterval;
 		// 버스를 미리 만들어둔다. 
-
+		/*시작시간 60, 중간시간 10 이면 먼저 60초 후 출발하는 버스 만들어 놓고 그후에 10초 있다가 출발하는 버스도 미리 설정해놓기*/
 		for(int time = StartTime;time <= EndTime;time += BusInterval)
 		{
 			double wheremove = time - StartTime;
