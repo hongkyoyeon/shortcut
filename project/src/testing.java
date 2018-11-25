@@ -97,10 +97,14 @@ public class testing
 		new edge(new mpoint(670,356),new mpoint(716,356),25);
 		new edge(new mpoint(716,356),new mpoint(808,347),25);
 		new edge(new mpoint(808,347),new mpoint(857,326),25);
-		new edge(new mpoint(857,326),new mpoint(897,302),25);
+		
+		new edge(new mpoint(857,326),new mpoint(892,302),25);
+		
 		new edge(new mpoint(897,302),new mpoint(996,238),25);
 		new edge(new mpoint(808,178),new mpoint(857,326),15);
+		
 		new edge(new mpoint(842,172),new mpoint(892,302),15);
+		
 		new edge(new mpoint(0,439),new mpoint(90,402),25);
 		new edge(new mpoint(90,402),new mpoint(150,381),25);
 		new edge(new mpoint(150,381),new mpoint(233,356),25);
@@ -234,13 +238,13 @@ public class testing
 		yellow.AddPoint(new mpoint(413,267), false);
 		yellow.AddPoint(new mpoint(497,274), true);
 		yellow.AddPoint(new mpoint(633,354), true);
-		yellow.AddPoint(new mpoint(670,355), true);
+		yellow.AddPoint(new mpoint(670,356), true);
 		yellow.AddPoint(new mpoint(716,356), true);
 		yellow.AddPoint(new mpoint(808,347), true);
 		yellow.AddPoint(new mpoint(857,326), true);
 		yellow.AddPoint(new mpoint(892,302), true);
 		yellow.AddPoint(new mpoint(996,238), true);
-		
+		/*
 		
 		BusRoute brown = new BusRoute(new Color(0,255,255),5, 300, 60);
 		brown.AddPoint(new mpoint(1,369), true);
@@ -422,7 +426,7 @@ public class testing
 		
 		
 		
-		
+		*/
 		
 		
 		

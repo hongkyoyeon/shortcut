@@ -5,12 +5,24 @@ import javax.swing.*;
 public class Bus extends GameObject {
 	public BusRoute Route;
 	public double WhereMove = 0;
+	public double BusSpeed = 0;
 	public BusObject component = null;
 	public Bus(BusRoute route, double start)
 	{
 		this.Route = route;
 		this.WhereMove = -start - 1;
 		System.out.println(this.WhereMove);
+	}
+	private void SetBusSpeed()
+	{
+		int last = (int)WhereMove;
+		int now = (int)WhereMove + 1;
+		if (Route.Path.size() == now) return;
+		edge_point p_last = edge_point.allitem.get(Route.Path.get(last));
+		edge_point p_now = edge_point.allitem.get(Route.Path.get(now));
+		edge edge_data = p_last.edge_list.get(p_now.point);
+		double d = edge_data.distance;
+		BusSpeed =  6 / edge_data.distance;
 	}
 	public void Update() //버스는 계속 시작이 지나면서 움직여야 하니깐 gameobject하면 나타나는 함수 중에서 update함수 사
 	{
@@ -26,6 +38,7 @@ public class Bus extends GameObject {
 				testing.aframe.add(component);
 				testing.aframe.setVisible(true);
 				component.Move(p);
+				SetBusSpeed();
 				// ���� ���
 			}
 		}
@@ -33,11 +46,12 @@ public class Bus extends GameObject {
 		{
 			// 내가 정류장을 지나갔는지 확인
 			int last = (int)WhereMove;
-			WhereMove += 0.01;//속도 조절 0.1을 하면 버스가빨리 움직
+			WhereMove += BusSpeed;//속도 조절 0.1을 하면 버스가빨리 움직
 			int now = (int)WhereMove;
 			if (last != now)//지금 버스가 0.999인데 0.1씩 증가한다고 하면 정거장에 안멈추니깐 근데 버스는 멈춰야 하니깐 이걸 체해줘야
 			{
 				System.out.println("교차로 지남");
+				SetBusSpeed();
 			}
 			
 			// 현재 위치가 어느 좌표에 있는지 확인할 예정
