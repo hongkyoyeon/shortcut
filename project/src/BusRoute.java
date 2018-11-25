@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
 public class BusRoute {
-	public List<Map<mpoint, Boolean>> Path = new ArrayList<>();
+	public List<mpoint> Path = new ArrayList<>();
+	public List<Boolean> Path_Stop = new ArrayList<>();
 	public List<Bus> Buses = new ArrayList<Bus>();
 	public int StartTime;
 	public int EndTime;
@@ -26,8 +27,9 @@ public class BusRoute {
 	public void AddPoint(mpoint Point, boolean StopPoint)
 	{
 		Map<mpoint,Boolean> aMap = Collections.singletonMap(Point,StopPoint);
-		Path.add(aMap);
-		// ���� �߰��ϴ� ���� �������ϰ�� �����忡 �� ��ü�� �߰��Ѵ�.
+		Path.add(Point);
+		Path_Stop.add(StopPoint);
+		
 		if (StopPoint == true)
 		{
 			BusStop stop = BusStop.GetObject(Point);

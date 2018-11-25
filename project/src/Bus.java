@@ -20,9 +20,8 @@ public class Bus extends GameObject {
 			WhereMove += 1;
 			if (WhereMove >= 0)
 			{
-				component = new BusObject(); 
-				Map<mpoint,Boolean> aa = Route.Path.get(0);
-				mpoint p = (mpoint)(aa.keySet().toArray())[0];
+				component = new BusObject();
+				mpoint p = Route.Path.get(0);
 				System.out.println("버스 출발" + p.x + "  " + p.y);
 				testing.aframe.add(component);
 				testing.aframe.setVisible(true);
@@ -53,11 +52,9 @@ public class Bus extends GameObject {
 			double detail = WhereMove - (int)WhereMove;
 			// ���� ����
 
-			
-			Map<mpoint,Boolean> aa = Route.Path.get(last);
-			mpoint last_p = (mpoint)(aa.keySet().toArray())[0];
-			aa = Route.Path.get(now);
-			mpoint now_p = (mpoint)(aa.keySet().toArray())[0];
+
+			mpoint last_p = Route.Path.get(last);
+			mpoint now_p = Route.Path.get(now);
 			
 			// �߰����� ã��
 			mpoint new_p = new mpoint((int)(last_p.x + (now_p.x - last_p.x) * detail),(int)(last_p.y + (now_p.y - last_p.y) * detail));
