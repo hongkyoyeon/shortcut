@@ -445,7 +445,7 @@ public class testing
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
-		ImageIcon icon1 = new ImageIcon(new ImageIcon("C:\\Users\\\uC7AC\uC2E0\\bus.jpg").getImage().getScaledInstance(45,45,Image.SCALE_DEFAULT));
+		ImageIcon icon1 = new ImageIcon(new ImageIcon("bus_stop.jpg").getImage().getScaledInstance(45,45,Image.SCALE_DEFAULT));
 		JLabel lblNewLabel = new JLabel("");
 		panel.add(lblNewLabel);
 		lblNewLabel.setIcon(icon1);
