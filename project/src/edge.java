@@ -5,6 +5,7 @@ public class edge {
 	public mpoint[] points = new mpoint[2];
 	public int size = 0;
 	public double distance;
+	public double offset = 0;
 	public edge(mpoint p1, mpoint p2, int size)
 	{
 		

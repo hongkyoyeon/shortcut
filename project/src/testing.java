@@ -15,7 +15,7 @@ public class testing
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		new edge(new mpoint(0, 0),new mpoint(40, 91),25);
+		new edge(new mpoint(40, 91),new mpoint(0,0),25);
 		new edge(new mpoint(40, 91),new mpoint(64,174),25);
 		new edge(new mpoint(64, 174),new mpoint(13, 193),25);
 		new edge(new mpoint(13, 193),new mpoint(0,165),25);
@@ -227,6 +227,8 @@ public class testing
 		
 		System.out.println(edge_point.allitem.size());
 		
+		edge e_p = edge_point.allitem.get(new mpoint(0,0)).edge_list.get(new mpoint(40,91));
+		e_p.offset = 1;
 		/*醫뚰몴 李띿뼱�꽌 踰꾩뒪 �끂�꽑留뚮뱾湲�, �젙瑜섏옣�씠硫� true, �븘�땲硫� false*/
 		/*�끂�옉�깋 �끂�꽑�엫*/
 		
