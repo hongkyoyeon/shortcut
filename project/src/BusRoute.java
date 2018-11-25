@@ -11,6 +11,7 @@ public class BusRoute {
 	public int StartTime;
 	public int EndTime;
 	public int BusInterval = 0;
+	
 	public boolean RoundTrip = false;
 	public BusRoute(Color color, int starttime, int endtime, int businterval)
 	{

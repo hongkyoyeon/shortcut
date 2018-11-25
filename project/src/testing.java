@@ -3,17 +3,17 @@ import java.awt.*;
 public class testing
 
 {
-	
-	public static JFrame aframe;
-	public static void main(String[] args)
-	{
-		
-		JFrame frame =new JFrame();
-		aframe = frame;
-		final int width =990;
-		final int height =715;
-		frame.setSize(width,height);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   
+   public static JFrame aframe;
+   public static void main(String[] args)
+   {
+      
+      JFrame frame =new JFrame();
+      aframe = frame;
+      final int width =990;
+      final int height =715;
+      frame.setSize(width,height);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		new edge(new mpoint(0, 0),new mpoint(40, 91),25);
 		new edge(new mpoint(40, 91),new mpoint(64,174),25);
