@@ -100,7 +100,7 @@ public class testing
 		
 		new edge(new mpoint(857,326),new mpoint(892,302),25);
 		
-		new edge(new mpoint(897,302),new mpoint(996,238),25);
+		new edge(new mpoint(892,302),new mpoint(996,238),25);
 		new edge(new mpoint(808,178),new mpoint(857,326),15);
 		
 		new edge(new mpoint(842,172),new mpoint(892,302),15);
