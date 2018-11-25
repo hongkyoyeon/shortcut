@@ -6,9 +6,9 @@ import javax.swing.*;
 
 import sun.java2d.loops.DrawLine;
 
-public class BusObject extends JComponent{
+public class BusIcon extends JComponent{
 	public Color color;
-	public BusObject(Color color)
+	public BusIcon(Color color)
 	{
 		this.color=color;
 		setSize(50, 50);
