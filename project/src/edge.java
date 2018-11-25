@@ -5,7 +5,7 @@ public class edge {
 	public static List<edge> allitem = new ArrayList<edge>();
 	public mpoint[] points = new mpoint[2];
 	public int size = 0;
-	
+	public double distance = 1;
 	public edge(mpoint p1, mpoint p2, int size)
 	{
 		points[0] = p1;
