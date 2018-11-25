@@ -1,4 +1,9 @@
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 public class testing
 
@@ -7,7 +12,7 @@ public class testing
    public static JFrame aframe;
    public static void main(String[] args)
    {
-      
+
       JFrame frame =new JFrame();
       aframe = frame;
       final int width =990;
@@ -430,15 +435,32 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(793,693), true);
 		
 		
+		JPanel contentPane;
 		
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
 		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		ImageIcon icon1 = new ImageIcon(new ImageIcon("C:\\Users\\\uC7AC\uC2E0\\bus.jpg").getImage().getScaledInstance(45,45,Image.SCALE_DEFAULT));
+		JLabel lblNewLabel = new JLabel("");
+		panel.add(lblNewLabel);
+		lblNewLabel.setIcon(icon1);
+		lblNewLabel.setBounds(200, 120, 555, 219);
+		lblNewLabel.setPreferredSize(new Dimension(200,50));
+		lblNewLabel.setToolTipText(" 3분 뒤 1030 번 버스 도착!"
+				+ "5분 뒤 2000 번 버스 도착!"
+				+ "10분뒤 3000번 버스 도착!");
 		
 		
 		
 		
 		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
-		
+		frame.add(lblNewLabel);
 		frame.add(component);
 		frame.setVisible(true);
 		
@@ -458,6 +480,10 @@ public class testing
 		
 		
 	}
+private static void setContentPane(JPanel contentPane) {
+	// TODO Auto-generated method stub
+	
+}
 	
 	
 	
