@@ -1,4 +1,4 @@
-import java.awt.Graphics;
+import java.awt.*;
 import java.util.*;
 
 import javax.swing.*;
@@ -20,7 +20,7 @@ public class Bus extends GameObject {
 			WhereMove += 1;
 			if (WhereMove >= 0)
 			{
-				component = new BusObject();
+				component = new BusObject(Route.color);
 				mpoint p = Route.Path.get(0);
 				System.out.println("버스 출발" + p.x + "  " + p.y);
 				testing.aframe.add(component);

@@ -222,20 +222,36 @@ public class testing
 		System.out.println(edge_point.allitem.size());
 		
 		/*좌표 찍어서 버스 노선만들기, 정류장이면 true, 아니면 false*/
-		BusRoute route = new BusRoute(5, 300, 60);
-		route.AddPoint(new mpoint(0,0), true);
-		route.AddPoint(new mpoint(40,91), true);
-		route.AddPoint(new mpoint(64,174), false);
-		route.AddPoint(new mpoint(413,267), false);
-		route.AddPoint(new mpoint(497,274), true);
-		route.AddPoint(new mpoint(527,146), true);
-		route.AddPoint(new mpoint(455,142), false);
-		route.AddPoint(new mpoint(340,145), false);
-		route.AddPoint(new mpoint(217,137), true);
+		/*노랑색 노선임*/
+		BusRoute yellow = new BusRoute(Color.RED,5, 300, 60);
+		yellow.AddPoint(new mpoint(0,0), true);
+		yellow.AddPoint(new mpoint(40,91), true);
+		yellow.AddPoint(new mpoint(64,174), false);
+		yellow.AddPoint(new mpoint(139,158), false);
+		yellow.AddPoint(new mpoint(217,137), true);
+		yellow.AddPoint(new mpoint(244,266), true);
+		yellow.AddPoint(new mpoint(337,257), false);
+		yellow.AddPoint(new mpoint(413,267), false);
+		yellow.AddPoint(new mpoint(497,274), true);
+		yellow.AddPoint(new mpoint(633,354), true);
+		yellow.AddPoint(new mpoint(670,355), true);
+		yellow.AddPoint(new mpoint(716,356), true);
+		yellow.AddPoint(new mpoint(808,347), true);
+		yellow.AddPoint(new mpoint(857,326), true);
+		yellow.AddPoint(new mpoint(892,302), true);
+		yellow.AddPoint(new mpoint(996,238), true);
 		
 		
-		
-		
+		BusRoute brown = new BusRoute(Color.GREEN,5, 300, 60);
+		brown.AddPoint(new mpoint(1,369), true);
+		brown.AddPoint(new mpoint(113,307), true);
+		brown.AddPoint(new mpoint(173,286), true);
+		brown.AddPoint(new mpoint(244,266), true);
+		brown.AddPoint(new mpoint(217,137), true);
+		brown.AddPoint(new mpoint(188,59), true);
+		brown.AddPoint(new mpoint(271,42), true);
+		brown.AddPoint(new mpoint(344,47), true);
+		brown.AddPoint(new mpoint(456,46), true);
 		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		

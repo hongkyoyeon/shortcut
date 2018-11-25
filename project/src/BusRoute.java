@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
+import java.awt.Color;
+
 public class BusRoute {
+	public Color color;
 	public List<mpoint> Path = new ArrayList<>();
 	public List<Boolean> Path_Stop = new ArrayList<>();
 	public List<Bus> Buses = new ArrayList<Bus>();
@@ -9,8 +12,10 @@ public class BusRoute {
 	public int EndTime;
 	public int BusInterval = 0;
 	public boolean RoundTrip = false;
-	public BusRoute(int starttime, int endtime, int businterval)
+	public BusRoute(Color color, int starttime, int endtime, int businterval)
 	{
+
+		this.color=color;
 		this.StartTime = starttime;
 		this.EndTime = endtime;
 		this.BusInterval = businterval;

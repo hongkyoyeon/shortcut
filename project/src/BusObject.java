@@ -7,8 +7,10 @@ import javax.swing.*;
 import sun.java2d.loops.DrawLine;
 
 public class BusObject extends JComponent{
-	public BusObject()
+	public Color color;
+	public BusObject(Color color)
 	{
+		this.color=color;
 		setSize(50, 50);
 		setToolTipText("A");
 		
@@ -16,7 +18,7 @@ public class BusObject extends JComponent{
 	public void paintComponent(Graphics g)
 	{
 		Graphics2D g2 = (Graphics2D) g;
-		g2.setColor(Color.BLUE);
+		g2.setColor(color);
 		g2.drawRect(0, 0, 50, 50);
 	}
 	public void Move(mpoint point)
