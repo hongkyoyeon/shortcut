@@ -12,6 +12,11 @@ public class edge_point{
 		this.size = size;
 		this.point = point;
 	}
+	public static edge_point GetObject(mpoint point)
+	{
+		return allitem.get(point);
+	}
+	
 	@Override
 	public String toString()
 	{
