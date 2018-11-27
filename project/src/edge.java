@@ -20,4 +20,12 @@ public class edge {
 		edge_point.allitem.get(p1).edge_list.put(p2, this);
 		edge_point.allitem.get(p2).edge_list.put(p1, this);
 	}
+	
+	public static edge GetObject(mpoint p1, mpoint p2)
+	{
+		// 포인트1에 위치한 교차로 찾기
+		edge_point edge_p1 = edge_point.GetObject(p1);
+		if (edge_p1 == null) return null;
+		return edge_p1.edge_list.get(p2);
+	}
 }
