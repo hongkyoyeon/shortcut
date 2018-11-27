@@ -13,7 +13,6 @@ public class BusIcon extends JComponent{
 		this.color=color;
 		setSize(50, 50);
 		setToolTipText("A");
-		
 	}
 	public void paintComponent(Graphics g)
 	{

@@ -276,7 +276,7 @@ public class testing
 		brown.AddPoint(new mpoint(454,1), false);
 		
 		
-		BusRoute red = new BusRoute(new Color(100,100,255),5, 3000, 300);
+		BusRoute red = new BusRoute(new Color(100,100,255),5, 3000, 210);
 		red.AddPoint(new mpoint(13,193), false);
 		red.AddPoint(new mpoint(64,174), false);
 		red.AddPoint(new mpoint(139,158), true);
@@ -292,7 +292,7 @@ public class testing
 		red.AddPoint(new mpoint(987,105), false);
 		
 		
-		BusRoute purple = new BusRoute(new Color(200,150,150),5, 3000, 300);
+		BusRoute purple = new BusRoute(new Color(200,150,150),5, 3000, 350);
 		purple.AddPoint(new mpoint(524,1), false);
 		purple.AddPoint(new mpoint(525,41), false);
 		purple.AddPoint(new mpoint(527,115), false);
@@ -304,7 +304,7 @@ public class testing
 		purple.AddPoint(new mpoint(732,693), false);
 		
 		
-		BusRoute blue = new BusRoute(new Color(255,100,255),5, 3000, 300);
+		BusRoute blue = new BusRoute(new Color(255,100,255),5, 3000, 320);
 		blue.AddPoint(new mpoint(863,7), false);
 		blue.AddPoint(new mpoint(870,29), true);
 		blue.AddPoint(new mpoint(811,41), false);
@@ -327,7 +327,7 @@ public class testing
 		blue.AddPoint(new mpoint(488,699), false);
 		
 		
-		BusRoute green = new BusRoute(new Color(255,255,0),5, 3000, 300);
+		BusRoute green = new BusRoute(new Color(255,255,0),5, 3000, 550);
 		green.AddPoint(new mpoint(863,7), false);
 		green.AddPoint(new mpoint(870,29), true);
 		green.AddPoint(new mpoint(890,91), false);
@@ -348,7 +348,7 @@ public class testing
 		green.AddPoint(new mpoint(231,701), false);
 		
 			
-		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 3000, 300);
+		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 3000, 170);
 		Darkgreen.AddPoint(new mpoint(0,439), false);
 		Darkgreen.AddPoint(new mpoint(90,402), false);
 		Darkgreen.AddPoint(new mpoint(150,381), false);
@@ -364,7 +364,7 @@ public class testing
 		Darkgreen.AddPoint(new mpoint(629,695), false);
 		
 		
-		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 3000, 300);
+		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 3000, 220);
 		Dark.AddPoint(new mpoint(1,686), false);
 		Dark.AddPoint(new mpoint(93,626), false);
 		Dark.AddPoint(new mpoint(126,602), false);
@@ -393,7 +393,7 @@ public class testing
 		Dark.AddPoint(new mpoint(996,238), false);
 		
 		
-		BusRoute Lightblue = new BusRoute(new Color(150,200,150),5, 3000, 300);
+		BusRoute Lightblue = new BusRoute(new Color(150,200,150),5, 3000, 440);
 		Lightblue.AddPoint(new mpoint(130,704), false);
 		Lightblue.AddPoint(new mpoint(130,659), false);
 		Lightblue.AddPoint(new mpoint(155,650), false);
@@ -413,7 +413,7 @@ public class testing
 		Lightblue.AddPoint(new mpoint(385,700), false);
 		
 		
-		BusRoute pink = new BusRoute(new Color(200,100,100),5, 3000, 300);
+		BusRoute pink = new BusRoute(new Color(200,100,100),5, 3000, 150);
 		pink.AddPoint(new mpoint(793,693), false);
 		pink.AddPoint(new mpoint(803,592), false);
 		pink.AddPoint(new mpoint(868,572), false);
@@ -427,7 +427,7 @@ public class testing
 		
 		
 		
-		BusRoute Darkbrown = new BusRoute(new Color(5,255,5),5, 3000, 300);
+		BusRoute Darkbrown = new BusRoute(new Color(5,255,5),5, 3000, 250);
 		Darkbrown.AddPoint(new mpoint(987,105), false);
 		Darkbrown.AddPoint(new mpoint(842,172), false);
 		Darkbrown.AddPoint(new mpoint(808,178), false);
