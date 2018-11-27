@@ -1,24 +1,29 @@
 import java.awt.*;
 import java.util.*;
-
 import javax.swing.*;
+
 // 버스 노선 위를 달리는 버스를 나타낸다.
 public class Bus extends GameObject {
-	public BusRoute Route; // 이 버스가 달리는 노선
-	public double WhereMove = 0; // 어느 정류장에 있는가?? (-이면 아직 출발하지 않았다는것을 의미하고, 1.5이면 (2-1)번째 정류장과 (2)번째 정류장 0.5지점에 있다는 의미
-	public double BusSpeed = 0; // 버스가 움직이는 속도. 이 속도는 정류장 사이의 간격에 따라 달라진다. (멀수록 스피드가 작아짐 = 결론적으로 같은 스피드로 보이도록 만들어주는 변수)
-	public BusIcon component = null; // 버스를 실제로 화면위에 나타내는 컴포넌트
+	public BusRoute Route;                      // 이 버스가 달리는 노선
+	public double WhereMove = 0; 			// 어느 정류장에 있는가?? (-이면 아직 출발하지 않았다는것을 의미하고, 1.5이면 (2-1)번째 정류장과 (2)번째 정류장 0.5지점에 있다는 의미
+	public double BusSpeed = 0; 				// 버스가 움직이는 속도. 이 속도는 정류장 사이의 간격에 따라 달라진다. (멀수록 스피드가 작아짐 = 결론적으로 같은 스피드로 보이도록 만들어주는 변수)
+	public BusIcon component = null; 		
+	// 버스를 실제로 화면위에 나타내는 컴포넌트
+	
 	public Bus(BusRoute route, double start)
 	{
+		
 		this.Route = route;
 		this.WhereMove = -start - 1; // 만약 Start가 60(1초)이면 -60으로 설정됨
 		System.out.println(this.WhereMove);
 	}
+	
 	private void SetBusSpeed()
+	
 	{
-		int last = (int)WhereMove; // 버스가 지나온 마지막 정류장
-		int now = (int)WhereMove + 1; // 버스가 가야할 다음 정류장
-		if (Route.Path.size() == now) return; // 다음 정류장이 존재하지 않을경우 함수를 빠져나간다.
+		int last = (int)WhereMove; 							// 버스가 지나온 마지막 정류장->(바로 전 정거장?)
+		int now = (int)WhereMove + 1; 								// 버스가 가야할 다음 정류장
+		if (Route.Path.size() == now) return; // 다음 정류장이 존재하지 않을경우 함수를 빠져나간다.(우리가 설정한 route의 전체 길이가 가야할 다음 정거장이랑 같다면 더 이상 갈 곳이 없는거니깐)
 		// 버스가 지나온 마지막 정류장 의 교차로
 		edge_point p_last = edge_point.allitem.get(Route.Path.get(last));
 		// 버스가 가야할 다음 정류장의 교차로
@@ -28,12 +33,17 @@ public class Bus extends GameObject {
 		// 교차로의 길이
 		double d = edge_data.distance;
 		// 버스 스피드로 나눈다.
-		// 만약에 거리가 길경우, 정류장을 이동하는 속도가 느려짐
+		// 만약에 거리가 길경우, 정류장을 이동하는 속도가 느려짐 ->그래야 나중에 지도에서 봤을때 긴거리든 짧은거리든 버스가 동일한 속도로 가는거 처럼 보여지기 때문
 		// 즉 1번째 정류장과 2번째 정류장을 지나갈때 거리가 길수록
 		// WhereMove가 1에서 2로 증가하는 속도가 느려진다.
 		BusSpeed =  1 / edge_data.distance;
 	}
-	public void Update() // 1/60초에 한번씩 갱신되는 함수
+	
+	
+	
+	
+	//gameobject를 실행하면 쓸 수 있는 함수중에서 어떤 값을 계속해서 갱신해 줘야할때 사용하는 함수인 update을 사용
+	public void Update() 	// 1/60초에 한번씩 갱신되는 함수----------------------(?)
 	{
 		if (WhereMove < 0) //버스가 출발하지 않은 경우
 		{

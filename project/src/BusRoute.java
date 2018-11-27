@@ -7,6 +7,7 @@ import java.awt.Color;
  * 버스 노선을 나타내는 클래스
  * 이 클래스를 이용해서 버스정류장의 위치, 움직이는 경로, 이 노선에 속한 버스(오브젝트), 시작시간, 버스 배차 간격, 버스 정류장 등을 조회할 수 있다.
  */
+
 public class BusRoute {
 	public Color color; // 버스 노선의 색깔
 	
@@ -21,6 +22,7 @@ public class BusRoute {
 	public int BusInterval = 0; // 시작시간을 기준으로 다음 버스의 간격
 	
 	public boolean RoundTrip = false; // 왕복 버스인가 # 아직 만들지 않음.
+	
 	
 	public BusRoute(Color color, int starttime, int endtime, int businterval)
 	{
@@ -42,6 +44,9 @@ public class BusRoute {
 			Buses.add(bus);
 		}
 	}
+	
+	
+	
 	
 	//해당 노선의 경로를 추가한다. 추가하는 경로는 모두 이어져 있어야하며 StopPoint의 변수를 통해, 정류장인지 아닌지 설정한다.
 	public void AddPoint(mpoint Point, boolean StopPoint)

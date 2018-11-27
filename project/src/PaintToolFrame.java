@@ -21,6 +21,8 @@ public class PaintToolFrame extends JComponent{
 		this.color = color;
 	}
 	Graphics2D g2;
+	
+	
 	public void drawLine(int x,int y, int x2, int y2, int size)
 	{
 		Stroke stroke = new BasicStroke(size + offset_size,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
@@ -35,12 +37,15 @@ public class PaintToolFrame extends JComponent{
 			double detail = e.offset + 1;
 			mpoint new_p = new mpoint((int)(e.points[0].x + (e.points[1].x - e.points[0].x) * detail),(int)(e.points[0].y + (e.points[1].y - e.points[0].y) * detail));
 			drawLine(e.points[0].x,e.points[0].y,new_p.x,new_p.y,e.size);
+			
 		}
 		else
 		{
 			drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y,e.size);
 		}
 	}
+	
+	
 	public void paintComponent(Graphics g)
 	{
 		g2 = (Graphics2D) g;
