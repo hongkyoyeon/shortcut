@@ -54,7 +54,7 @@ public class PaintToolFrame extends JComponent{
 		for(edge e : edge.allitem) {
 			if (e.offset == 1)
 			{
-				color = new Color(0,0,0);
+				color = new Color(0,0,0); //색조정 완료!
 			}
 			else
 			{
