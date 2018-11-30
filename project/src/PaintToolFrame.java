@@ -51,6 +51,30 @@ public class PaintToolFrame extends JComponent{
 		g2 = (Graphics2D) g;
 		offset_size = 2;
 		color = new Color(255,255,255);
+	
+		
+		
+		g.setColor(color = new Color(0,200,255)); 
+		g.fillRect(340,145,170,120);
+		g.fillRect(217,137,123,120);
+		g.fillRect(135,150,90,120);
+		g.fillRect(68,174,90,120);
+		g.fillRect(0,180,90,120);
+		g.fillRect(0,250,90,85);
+		g.fillRect(0,315,40,40);
+		g.fillRect(455,160,90,125);
+		g.fillRect(540,170,60,125);
+		g.fillRect(560,197,80,125);
+		g.fillRect(600,197,200,150);
+		g.fillRect(780,180,90,160);
+		g.fillRect(842,170,80,130);
+		g.fillRect(880,150,75,130);
+		g.fillRect(900,130,75,130);
+		g.fillRect(930,120,75,130);
+			
+		
+		
+		 
 		for(edge e : edge.allitem) {
 			if (e.offset == 1)
 			{

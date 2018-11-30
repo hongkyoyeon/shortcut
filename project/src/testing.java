@@ -420,6 +420,7 @@ public class testing
 		Lightblue.AddPoint(new mpoint(385,700), false);
 		
 		
+		
 		BusRoute pink = new BusRoute(new Color(200,100,100),5, 3000, 150);
 		pink.AddPoint(new mpoint(793,693), false);
 		pink.AddPoint(new mpoint(803,592), false);
@@ -454,8 +455,6 @@ public class testing
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
-		
 		
 		
 		
