@@ -21,6 +21,7 @@ public class testing
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       
+      
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
 		new edge(new mpoint(40, 91),new mpoint(64,174),25);
@@ -141,15 +142,15 @@ public class testing
 		new edge(new mpoint(93,626),new mpoint(126,602),20);
 		new edge(new mpoint(93,626),new mpoint(1,686),20);
 		new edge(new mpoint(93,626),new mpoint(101,702),20);
-		new edge(new mpoint(140,704),new mpoint(126,602),20);
+		new edge(new mpoint(135,704),new mpoint(126,602),20); //여기도 130->135
 		new edge(new mpoint(160,492),new mpoint(167,555),20);
 		new edge(new mpoint(145,560),new mpoint(167,555),15);
 		new edge(new mpoint(145,560),new mpoint(155,650),15);
 		new edge(new mpoint(181,642),new mpoint(155,650),15);
 		new edge(new mpoint(181,642),new mpoint(167,555),20);
 		new edge(new mpoint(181,642),new mpoint(191,703),20);
-		new edge(new mpoint(158,703),new mpoint(155,650),15);
-		new edge(new mpoint(130,704),new mpoint(130,659),15);
+		new edge(new mpoint(163,703),new mpoint(155,650),15);//여기도 바꿈 (158->163)
+		new edge(new mpoint(135,704),new mpoint(130,659),15);  ////여기 고침!!(130->135)
 		new edge(new mpoint(130,659),new mpoint(155,650),15);
 		
 		new edge(new mpoint(203,484),new mpoint(160,492),15);
@@ -238,10 +239,16 @@ public class testing
 		edge e_p = edge_point.allitem.get(new mpoint(0,0)).edge_list.get(new mpoint(40,91));
 		edge e_p2 = edge_point.allitem.get(new mpoint(172,2)).edge_list.get(new mpoint(181,29));
 		edge e_p3 = edge_point.allitem.get(new mpoint(13,193)).edge_list.get(new mpoint(0,165));
+		edge e_p4 = edge_point.allitem.get(new mpoint(842,172)).edge_list.get(new mpoint(987,105));
+		edge e_p5 = edge_point.allitem.get(new mpoint(870,29)).edge_list.get(new mpoint(863,7));
+		edge e_p6 = edge_point.allitem.get(new mpoint(13, 193)).edge_list.get(new mpoint(0,165));
+		
 		e_p.offset = 1;
 		e_p2.offset=1;
 		e_p3.offset=1;
-		
+		e_p4.offset=1;
+		e_p5.offset=1;
+		e_p6.offset=1;
 		
 		/*버스 노선 따라서 버스가 움직이게! / true는 정류장, false는 그냥 길*/
 		BusRoute yellow = new BusRoute(Color.RED,5, 3000, 300);
@@ -394,7 +401,7 @@ public class testing
 		
 		
 		BusRoute Lightblue = new BusRoute(new Color(150,200,150),5, 3000, 300);
-		Lightblue.AddPoint(new mpoint(130,704), true);
+		Lightblue.AddPoint(new mpoint(135,704), true); //여기도 130->135로 고침!
 		Lightblue.AddPoint(new mpoint(130,659), true);
 		Lightblue.AddPoint(new mpoint(155,650), true);
 		Lightblue.AddPoint(new mpoint(181,642), false);

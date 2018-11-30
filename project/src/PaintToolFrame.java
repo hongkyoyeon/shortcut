@@ -50,11 +50,11 @@ public class PaintToolFrame extends JComponent{
 	{
 		g2 = (Graphics2D) g;
 		offset_size = 2;
-		color = new Color(0,0,0);
+		color = new Color(255,255,255);
 		for(edge e : edge.allitem) {
 			if (e.offset == 1)
 			{
-				color = new Color(255,0,0);
+				color = new Color(0,0,0);
 			}
 			else
 			{

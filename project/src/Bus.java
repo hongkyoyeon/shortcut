@@ -24,7 +24,7 @@ public class Bus extends GameObject {
 		int last = (int)WhereMove; 							// 버스가 지나온 마지막 정류장->(바로 전 정거장?)
 		int now = (int)WhereMove + 1; 								// 버스가 가야할 다음 정류장
 		if (Route.Path.size() == now) return; // 다음 정류장이 존재하지 않을경우 함수를 빠져나간다.(우리가 설정한 route의 전체 길이가 가야할 다음 정거장이랑 같다면 더 이상 갈 곳이 없는거니깐)
-		// 버스가 지나온 마지막 정류장 의 교차로
+		//c 버스가 지나온 마지막 정류장 의 교차로
 		edge_point p_last = edge_point.allitem.get(Route.Path.get(last));
 		// 버스가 가야할 다음 정류장의 교차로
 		edge_point p_now = edge_point.allitem.get(Route.Path.get(now));
