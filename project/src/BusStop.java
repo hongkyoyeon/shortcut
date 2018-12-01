@@ -8,14 +8,11 @@ public class BusStop extends DrawObject {
 		{
 			BusStop newitem = new BusStop();
 			newitem.setLocation(mpoint);
+			newitem.SetImage("bus_stop.jpg");
+			newitem.ChangeZ(1000);
 			allitem.put(mpoint, newitem);
 		}
 		return allitem.get(mpoint);
-	}
-	public void Start()
-	{
-		
-		
 	}
 	public void AddRoute(BusRoute data)
 	{

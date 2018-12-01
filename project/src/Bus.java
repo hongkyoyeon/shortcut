@@ -3,11 +3,10 @@ import java.util.*;
 import javax.swing.*;
 
 // 버스 노선 위를 달리는 버스를 나타낸다.
-public class Bus extends GameObject {
+public class Bus extends DrawObject {
 	public BusRoute Route;                      // 이 버스가 달리는 노선
 	public double WhereMove = 0; 			// 어느 정류장에 있는가?? (-이면 아직 출발하지 않았다는것을 의미하고, 1.5이면 (2-1)번째 정류장과 (2)번째 정류장 0.5지점에 있다는 의미
-	public double BusSpeed = 0; 				// 버스가 움직이는 속도. 이 속도는 정류장 사이의 간격에 따라 달라진다. (멀수록 스피드가 작아짐 = 결론적으로 같은 스피드로 보이도록 만들어주는 변수)
-	public BusIcon component = null; 		
+	public double BusSpeed = 0; 				// 버스가 움직이는 속도. 이 속도는 정류장 사이의 간격에 따라 달라진다. (멀수록 스피드가 작아짐 = 결론적으로 같은 스피드로 보이도록 만들어주는 변수)	
 	// 버스를 실제로 화면위에 나타내는 컴포넌트
 	
 	public Bus(BusRoute route, double start)
@@ -50,12 +49,10 @@ public class Bus extends GameObject {
 			WhereMove += 1;
 			if (WhereMove >= 0) // 이제 출발할 시간이 된경우
 			{
-				component = new BusIcon(Route.color); // 버스 오브젝트(Draw)생성
 				mpoint p = Route.Path.get(0); // 첫번째 정류장의 위치
 				System.out.println("버스 출발!" + p.x + "  " + p.y);
-				testing.aframe.add(component);
-				testing.aframe.setVisible(true);
-				component.Move(p);
+				setLocation(p);
+				SetImage("bus.png");
 				// 버스 스피드를 계산한다.
 				SetBusSpeed();
 			}
@@ -96,8 +93,7 @@ public class Bus extends GameObject {
 			mpoint new_p = new mpoint((int)(last_p.x + (now_p.x - last_p.x) * detail),(int)(last_p.y + (now_p.y - last_p.y) * detail));
 			
 			// 실제 버스 컴포넌트의 위치를 갱신한다.
-			component.Move(new_p);
-
+			setLocation(new_p);
 			//System.out.println("position " + new_p.x + "  " + new_p.y);
 					
 		}
