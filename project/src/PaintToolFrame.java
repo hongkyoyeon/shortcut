@@ -48,9 +48,7 @@ public class PaintToolFrame extends JComponent{
 	
 	public void paintComponent(Graphics g)
 	{
-		g2 = (Graphics2D) g; 
-		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
+		g2 = (Graphics2D) g;
 		offset_size = 2;
 		color = new Color(255,255,255);
 	
