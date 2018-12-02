@@ -238,19 +238,7 @@ public class testing
 		new edge(new mpoint(931,405),new mpoint(1004,377),15);
 		new edge(new mpoint(915,350),new mpoint(1001,320),15);
 		
-		List<mpoint> path = Dijkstra.Start(new mpoint(0,0), new mpoint(497,274));
-		for(mpoint point : path)
-		{
-			System.out.println("x : " + point.x + "   y : " + point.y);
-		}
-		
-		try
-		{
-			Thread.sleep(11123126);
-		} catch (InterruptedException e)
-		{
-			
-		}
+
 		
 		
 		
@@ -275,40 +263,40 @@ public class testing
 		/*버스 노선 따라서 버스가 움직이게! / true는 정류장, false는 그냥 길*/
 		BusRoute yellow = new BusRoute(Color.RED,5, 3000, 300);
 		yellow.AddPoint(new mpoint(0,0), false);
-		yellow.AddPoint(new mpoint(40,91), false);
+		yellow.AddPoint(new mpoint(40,91), true);
 		yellow.AddPoint(new mpoint(64,174), false);
-		yellow.AddPoint(new mpoint(139,158), true);
-		yellow.AddPoint(new mpoint(217,137), false);
+		yellow.AddPoint(new mpoint(139,158), false);
+		yellow.AddPoint(new mpoint(217,137), true);
 		yellow.AddPoint(new mpoint(244,266), false);
 		yellow.AddPoint(new mpoint(337,257), false);
-		yellow.AddPoint(new mpoint(413,267), false);
+		yellow.AddPoint(new mpoint(413,267), true);
 		yellow.AddPoint(new mpoint(497,274), false);
-		yellow.AddPoint(new mpoint(633,354), true);
+		yellow.AddPoint(new mpoint(633,354), false);
 		yellow.AddPoint(new mpoint(670,356), false);
-		yellow.AddPoint(new mpoint(716,356), false);
+		yellow.AddPoint(new mpoint(716,356), true);
 		yellow.AddPoint(new mpoint(808,347), false);
-		yellow.AddPoint(new mpoint(857,326), true);
+		yellow.AddPoint(new mpoint(857,326), false);
 		yellow.AddPoint(new mpoint(892,302), false);
 		yellow.AddPoint(new mpoint(996,238), false);
 		
 		
 		BusRoute brown = new BusRoute(new Color(0,255,255),5, 3000, 300);
 		brown.AddPoint(new mpoint(1,369), false);
-		brown.AddPoint(new mpoint(113,307), false);
+		brown.AddPoint(new mpoint(113,307), true);
 		brown.AddPoint(new mpoint(173,286), false);
-		brown.AddPoint(new mpoint(139,158), true);
+		brown.AddPoint(new mpoint(139,158), false);
 		brown.AddPoint(new mpoint(217,137), false);
 		brown.AddPoint(new mpoint(188,59), false);
 		brown.AddPoint(new mpoint(271,42), false);
 		brown.AddPoint(new mpoint(344,47), false);
-		brown.AddPoint(new mpoint(456,46), false);
+		brown.AddPoint(new mpoint(456,46), true);
 		brown.AddPoint(new mpoint(454,1), false);
 		
 		
 		BusRoute red = new BusRoute(new Color(100,100,255),5, 3000, 210);
 		red.AddPoint(new mpoint(13,193), false);
 		red.AddPoint(new mpoint(64,174), false);
-		red.AddPoint(new mpoint(139,158), true);
+		red.AddPoint(new mpoint(139,158), false);
 		red.AddPoint(new mpoint(217,137), false);
 		red.AddPoint(new mpoint(340,145), false);
 		red.AddPoint(new mpoint(455,142), false);
@@ -325,7 +313,7 @@ public class testing
 		purple.AddPoint(new mpoint(524,1), false);
 		purple.AddPoint(new mpoint(525,41), false);
 		purple.AddPoint(new mpoint(527,115), false);
-		purple.AddPoint(new mpoint(527,146), true);
+		purple.AddPoint(new mpoint(527,146), false);
 		purple.AddPoint(new mpoint(497,274), false);
 		purple.AddPoint(new mpoint(489,310), true);
 		purple.AddPoint(new mpoint(612,491), false);
@@ -335,31 +323,31 @@ public class testing
 		
 		BusRoute blue = new BusRoute(new Color(255,100,255),5, 3000, 320);
 		blue.AddPoint(new mpoint(863,7), false);
-		blue.AddPoint(new mpoint(870,29), true);
+		blue.AddPoint(new mpoint(870,29), false);
 		blue.AddPoint(new mpoint(811,41), false);
-		blue.AddPoint(new mpoint(780,42), false);
+		blue.AddPoint(new mpoint(780,42), true);
 		blue.AddPoint(new mpoint(677,48), false);
 		blue.AddPoint(new mpoint(649,49), false);
 		blue.AddPoint(new mpoint(620,49), false);
-		blue.AddPoint(new mpoint(631,145), false);
+		blue.AddPoint(new mpoint(631,145), true);
 		blue.AddPoint(new mpoint(527,115), false);
-		blue.AddPoint(new mpoint(527,146), true);
+		blue.AddPoint(new mpoint(527,146), false);
 		blue.AddPoint(new mpoint(497,274), false);
-		blue.AddPoint(new mpoint(489,310), true);
+		blue.AddPoint(new mpoint(489,310), false);
 		blue.AddPoint(new mpoint(430,313), false);
 		blue.AddPoint(new mpoint(364,328), false);
 		blue.AddPoint(new mpoint(389,394), false);
 		blue.AddPoint(new mpoint(396,413), false);
 		blue.AddPoint(new mpoint(416,449), false);
-		blue.AddPoint(new mpoint(454,569), true);
+		blue.AddPoint(new mpoint(454,569), false);
 		blue.AddPoint(new mpoint(464,654), false);
 		blue.AddPoint(new mpoint(488,699), false);
 		
 		
 		BusRoute green = new BusRoute(new Color(255,255,0),5, 3000, 550);
 		green.AddPoint(new mpoint(863,7), false);
-		green.AddPoint(new mpoint(870,29), true);
-		green.AddPoint(new mpoint(890,91), false);
+		green.AddPoint(new mpoint(870,29), false);
+		green.AddPoint(new mpoint(890,91), true);
 		green.AddPoint(new mpoint(825,119), false);
 		green.AddPoint(new mpoint(796,125), false);
 		green.AddPoint(new mpoint(690,142), false);
@@ -370,23 +358,23 @@ public class testing
 		green.AddPoint(new mpoint(656,465), false);
 		green.AddPoint(new mpoint(612,491), false);
 		green.AddPoint(new mpoint(544,526), false);
-		green.AddPoint(new mpoint(454,569), true);
+		green.AddPoint(new mpoint(454,569), false);
 		green.AddPoint(new mpoint(362,615), false);
-		green.AddPoint(new mpoint(292,664), true);
-		green.AddPoint(new mpoint(229,683), false);
+		green.AddPoint(new mpoint(292,664),false);
+		green.AddPoint(new mpoint(229,683), true);
 		green.AddPoint(new mpoint(231,701), false);
 		
 			
 		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 3000, 170);
 		Darkgreen.AddPoint(new mpoint(0,439), false);
-		Darkgreen.AddPoint(new mpoint(90,402), false);
+		Darkgreen.AddPoint(new mpoint(90,402), true);
 		Darkgreen.AddPoint(new mpoint(150,381), false);
 		Darkgreen.AddPoint(new mpoint(233,356), false);
 		Darkgreen.AddPoint(new mpoint(242,418), true);
 		Darkgreen.AddPoint(new mpoint(249,472), false);
 		Darkgreen.AddPoint(new mpoint(266,548), false);
-		Darkgreen.AddPoint(new mpoint(292,664), true);
-		Darkgreen.AddPoint(new mpoint(362,615), false);
+		Darkgreen.AddPoint(new mpoint(292,664), false);
+		Darkgreen.AddPoint(new mpoint(362,615), true);
 		Darkgreen.AddPoint(new mpoint(454,569), true);
 		Darkgreen.AddPoint(new mpoint(544,526), false);
 		Darkgreen.AddPoint(new mpoint(578,600), false);
@@ -395,13 +383,13 @@ public class testing
 		
 		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 3000, 220);
 		Dark.AddPoint(new mpoint(1,686), false);
-		Dark.AddPoint(new mpoint(93,626), false);
+		Dark.AddPoint(new mpoint(93,626), true);
 		Dark.AddPoint(new mpoint(126,602), false);
 		Dark.AddPoint(new mpoint(110,505), false);
 		Dark.AddPoint(new mpoint(160,492), false);
 		Dark.AddPoint(new mpoint(203,484), false);
 		Dark.AddPoint(new mpoint(249,472), false);
-		Dark.AddPoint(new mpoint(242,418), true);
+		Dark.AddPoint(new mpoint(242,418), false);
 		Dark.AddPoint(new mpoint(292,406), false);
 		Dark.AddPoint(new mpoint(299,446), false);
 		Dark.AddPoint(new mpoint(396,413), false);
@@ -409,7 +397,7 @@ public class testing
 		Dark.AddPoint(new mpoint(454,363), false);
 		Dark.AddPoint(new mpoint(485,415), false);
 		Dark.AddPoint(new mpoint(544,526), false);
-		Dark.AddPoint(new mpoint(612,491), false);
+		Dark.AddPoint(new mpoint(612,491), true);
 		Dark.AddPoint(new mpoint(656,465), false);
 		Dark.AddPoint(new mpoint(695,446), false);
 		Dark.AddPoint(new mpoint(741,421), false);
@@ -417,23 +405,23 @@ public class testing
 		Dark.AddPoint(new mpoint(797,487), true);
 		Dark.AddPoint(new mpoint(862,465), false);
 		Dark.AddPoint(new mpoint(894,431), false);
-		Dark.AddPoint(new mpoint(857,326), true);
-		Dark.AddPoint(new mpoint(892,302), false);
+		Dark.AddPoint(new mpoint(857,326), false);
+		Dark.AddPoint(new mpoint(892,302), true);
 		Dark.AddPoint(new mpoint(996,238), false);
 		
 		
 		BusRoute Lightblue = new BusRoute(new Color(150,200,150),5, 3000, 300);
-		Lightblue.AddPoint(new mpoint(135,704), true); //여기도 130->135로 고침!
-		Lightblue.AddPoint(new mpoint(130,659), true);
-		Lightblue.AddPoint(new mpoint(155,650), true);
-		Lightblue.AddPoint(new mpoint(181,642), false);
+		Lightblue.AddPoint(new mpoint(135,704), false); //여기도 130->135로 고침!
+		Lightblue.AddPoint(new mpoint(130,659), false);
+		Lightblue.AddPoint(new mpoint(155,650), false);
+		Lightblue.AddPoint(new mpoint(181,642), true);
 		Lightblue.AddPoint(new mpoint(167,555), false);
 		Lightblue.AddPoint(new mpoint(160,492), false);
 		Lightblue.AddPoint(new mpoint(203,484), false);
 		Lightblue.AddPoint(new mpoint(249,472), false);
-		Lightblue.AddPoint(new mpoint(242,418), true);
+		Lightblue.AddPoint(new mpoint(242,418), false);
 		Lightblue.AddPoint(new mpoint(233,356), false);
-		Lightblue.AddPoint(new mpoint(286,343), false);
+		Lightblue.AddPoint(new mpoint(286,343), true);
 		Lightblue.AddPoint(new mpoint(292,406), false);
 		Lightblue.AddPoint(new mpoint(299,446), false);
 		Lightblue.AddPoint(new mpoint(329,525), false);
@@ -445,14 +433,14 @@ public class testing
 		
 		BusRoute pink = new BusRoute(new Color(200,100,100),5, 3000, 150);
 		pink.AddPoint(new mpoint(793,693), false);
-		pink.AddPoint(new mpoint(803,592), false);
+		pink.AddPoint(new mpoint(803,592), true);
 		pink.AddPoint(new mpoint(868,572), false);
-		pink.AddPoint(new mpoint(909,554), false);
+		pink.AddPoint(new mpoint(909,554), true);
 		pink.AddPoint(new mpoint(886,510), false);
 		pink.AddPoint(new mpoint(914,492), false);
 		pink.AddPoint(new mpoint(939,465), false);
 		pink.AddPoint(new mpoint(931,405), false);
-		pink.AddPoint(new mpoint(915,350), false);
+		pink.AddPoint(new mpoint(915,350), true);
 		pink.AddPoint(new mpoint(1001,320), false);
 		
 		
@@ -460,11 +448,11 @@ public class testing
 		BusRoute Darkbrown = new BusRoute(new Color(5,255,5),5, 3000, 250);
 		Darkbrown.AddPoint(new mpoint(987,105), false);
 		Darkbrown.AddPoint(new mpoint(842,172), false);
-		Darkbrown.AddPoint(new mpoint(808,178), false);
-		Darkbrown.AddPoint(new mpoint(857,326), true);
+		Darkbrown.AddPoint(new mpoint(808,178), true);
+		Darkbrown.AddPoint(new mpoint(857,326), false);
 		Darkbrown.AddPoint(new mpoint(894,431), false);
 		Darkbrown.AddPoint(new mpoint(862,465), false);
-		Darkbrown.AddPoint(new mpoint(797,487), true);
+		Darkbrown.AddPoint(new mpoint(797,487), false);
 		Darkbrown.AddPoint(new mpoint(804,539), false);
 		Darkbrown.AddPoint(new mpoint(803,592), false);
 		Darkbrown.AddPoint(new mpoint(793,693), false);

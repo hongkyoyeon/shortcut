@@ -27,7 +27,7 @@ public class PaintToolFrame extends JComponent{
 	{
 		Stroke stroke = new BasicStroke(size + offset_size,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
 		g2.setStroke(stroke);
-		g2.setColor(color = new Color(255,0,0));
+		g2.setColor(color);
         g2.drawLine(x,y,x2,y2);
 	}
 	public void drawLine(edge e)
@@ -74,7 +74,6 @@ public class PaintToolFrame extends JComponent{
 			
 		
 		
-		 
 		for(edge e : edge.allitem) {
 			if (e.offset == 1)
 			{
