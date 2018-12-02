@@ -17,16 +17,17 @@ public class BusIcon extends JComponent{
 	public String Path = "/Users/hong-kyoyeon/Desktop/shortcut/shortcut/project/";
 	public Image img = null;
 	private mpoint Size = new mpoint(50,50);
-	
+	private mpoint Position = new mpoint(0,0);
 	public void SetSize(mpoint size)
 	{
 		Size = size;
 		setSize(size.x, size.y);
+		Move(Position);
 		repaint();
 	}
 	public BusIcon()
 	{
-		SetSize(new mpoint(30,30));
+		SetSize(new mpoint(0,0));
 		setToolTipText("A");
 	}
 	
@@ -51,6 +52,7 @@ public class BusIcon extends JComponent{
 	}
 	public void Move(mpoint point)
 	{
+		Position = point;
 		setLocation(point.x - Size.x/2, point.y - Size.y/2);
 	}
 }
