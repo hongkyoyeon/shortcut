@@ -14,21 +14,29 @@ public class BusIcon extends JComponent{
 	public Graphics2D g2;
 	public Color color;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
-	public String Path = "C:\\Users\\재신\\Desktop\\shortcut\\project\\";
+	public String Path = "/Users/hong-kyoyeon/Desktop/shortcut/shortcut/project/";
 	public Image img = null;
+	
+	
 	public BusIcon()
 	{
 		setSize(50, 50);
 		setToolTipText("A");
 	}
+	
+	
+	
 	public void SetImage(String key)
 	{
 		if (!imgs.containsKey(key)) 
 		{
 			imgs.put(key, Toolkit.getDefaultToolkit().getImage(Path+key));
 		}
+		
 		img = imgs.get(key);
 	}
+	
+	
 	public void paintComponent(Graphics g)
 	{
 		g2 = (Graphics2D) g;
