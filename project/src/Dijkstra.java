@@ -21,7 +21,7 @@ public class Dijkstra {
 		    {
 	    		if (select_node == null || select_node.cost > node.cost)
 	    		{
-	    		select_node = node;	
+	    			select_node = node;	
 	    		}
 		    }
 	    	if (select_node.position.equals(finish_point))
@@ -45,8 +45,8 @@ public class Dijkstra {
 	    	
 		    for(edge item : edge_p.edge_list.values()) // item: 연결된 도로 , edge_list의 출발점을 연결된 도로갯수만큼 돌린다 
 		    {
-		    	mpoint point = item.Other_point(start_point); // 지점에서 얼마만큼의 길이를 가면 그 노드를 point로 저장
-		    	
+		    	mpoint point = item.Other_point(select_node.position); // 지점에서 얼마만큼의 길이를 가면 그 노드를 point로 저장
+		    	if (yesnode.containsKey(point)) continue;
 		    	if (!nonode.containsKey(point))
 		    	{
 		    		Dijkstranode newnode = new Dijkstranode(point);

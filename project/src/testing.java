@@ -238,7 +238,7 @@ public class testing
 		new edge(new mpoint(931,405),new mpoint(1004,377),15);
 		new edge(new mpoint(915,350),new mpoint(1001,320),15);
 		
-		List<mpoint> path = Dijkstra.Start(new mpoint(0,0), new mpoint(139,158));
+		List<mpoint> path = Dijkstra.Start(new mpoint(0,0), new mpoint(497,274));
 		for(mpoint point : path)
 		{
 			System.out.println("x : " + point.x + "   y : " + point.y);
