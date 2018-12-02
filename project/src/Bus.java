@@ -53,6 +53,7 @@ public class Bus extends DrawObject {
 				System.out.println("버스 출발!" + p.x + "  " + p.y);
 				setLocation(p);
 				SetImage("bus.png");
+				ChangeZ(3000);
 				// 버스 스피드를 계산한다.
 				SetBusSpeed();
 			}

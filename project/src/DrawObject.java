@@ -38,7 +38,7 @@ public class DrawObject extends GameObject{
 	}
 	public void Dispose()
 	{
-		orders.remove(cp);
+		orders.remove(this);
 		testing.aframe.remove(cp);
 		super.Dispose();
 	}
@@ -46,9 +46,9 @@ public class DrawObject extends GameObject{
 		 
         @Override
         public int compare(DrawObject o1, DrawObject o2) {
-        	if (o1.z < o2.z) return -1;
+        	if (o1.z < o2.z) return 1;
         	else if (o1.z == o2.z) return 0;
-        	else return 1;
+        	else return -1;
         }        
     }
 }
