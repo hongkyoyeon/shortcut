@@ -10,6 +10,7 @@ public class BusStop extends DrawObject {
 			newitem.setLocation(mpoint);
 			newitem.SetImage("bus_stop.jpg");
 			newitem.ChangeZ(1000);
+			newitem.setSize(new mpoint(30, 30));
 			allitem.put(mpoint, newitem);
 		}
 		return allitem.get(mpoint);

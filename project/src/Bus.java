@@ -52,7 +52,7 @@ public class Bus extends DrawObject {
 				mpoint p = Route.Path.get(0); // 첫번째 정류장의 위치
 				System.out.println("버스 출발!" + p.x + "  " + p.y);
 				setLocation(p);
-				SetImage("bus.png");
+				setSize(new mpoint(50,40));
 				ChangeZ(3000);
 				// 버스 스피드를 계산한다.
 				SetBusSpeed();
