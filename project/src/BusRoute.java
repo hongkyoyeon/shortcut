@@ -24,9 +24,8 @@ public class BusRoute {
 	public boolean RoundTrip = false; // 왕복 버스인가 # 아직 만들지 않음.
 	
 	
-	public BusRoute(Color color, int starttime, int endtime, int businterval)
+	public BusRoute(String img, int starttime, int endtime, int businterval)
 	{
-		this.color=color;
 		this.StartTime = starttime;
 		this.EndTime = endtime;
 		this.BusInterval = businterval;
@@ -40,6 +39,7 @@ public class BusRoute {
 			System.out.println("버스 생성 : " + (wheremove / 60) + "초 뒤에 출발 예정");
 			// 버스를 만든다. 버스에는 해당 노선과 출발시간을 적어준다.
 			Bus bus = new Bus(this,wheremove);
+			bus.SetImage(img);
 			// 이 노선에 속한 버스 리스트에 방금 만든 버스를 연결(추가)한다.
 			Buses.add(bus);
 		}

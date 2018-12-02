@@ -261,7 +261,7 @@ public class testing
 		e_p6.offset=1;
 		
 		/*버스 노선 따라서 버스가 움직이게! / true는 정류장, false는 그냥 길*/
-		BusRoute yellow = new BusRoute(Color.RED,5, 3000, 300);
+		BusRoute yellow = new BusRoute("bus11.png",5, 3000, 300);
 		yellow.AddPoint(new mpoint(0,0), false);
 		yellow.AddPoint(new mpoint(40,91), true);
 		yellow.AddPoint(new mpoint(64,174), false);
@@ -280,7 +280,7 @@ public class testing
 		yellow.AddPoint(new mpoint(996,238), false);
 		
 		
-		BusRoute brown = new BusRoute(new Color(0,255,255),5, 3000, 300);
+		BusRoute brown = new BusRoute("bus2.png",5, 3000, 300);
 		brown.AddPoint(new mpoint(1,369), false);
 		brown.AddPoint(new mpoint(113,307), true);
 		brown.AddPoint(new mpoint(173,286), false);
@@ -293,7 +293,7 @@ public class testing
 		brown.AddPoint(new mpoint(454,1), false);
 		
 		
-		BusRoute red = new BusRoute(new Color(100,100,255),5, 3000, 210);
+		BusRoute red = new BusRoute("bus3.png",5, 3000, 210);
 		red.AddPoint(new mpoint(13,193), false);
 		red.AddPoint(new mpoint(64,174), false);
 		red.AddPoint(new mpoint(139,158), false);
@@ -309,7 +309,7 @@ public class testing
 		red.AddPoint(new mpoint(987,105), false);
 		
 		
-		BusRoute purple = new BusRoute(new Color(200,150,150),5, 3000, 350);
+		BusRoute purple = new BusRoute("bus4.png",5, 3000, 350);
 		purple.AddPoint(new mpoint(524,1), false);
 		purple.AddPoint(new mpoint(525,41), false);
 		purple.AddPoint(new mpoint(527,115), false);
@@ -321,7 +321,7 @@ public class testing
 		purple.AddPoint(new mpoint(732,693), false);
 		
 		
-		BusRoute blue = new BusRoute(new Color(255,100,255),5, 3000, 320);
+		BusRoute blue = new BusRoute("bus5.png",5, 3000, 320);
 		blue.AddPoint(new mpoint(863,7), false);
 		blue.AddPoint(new mpoint(870,29), false);
 		blue.AddPoint(new mpoint(811,41), false);
@@ -344,7 +344,7 @@ public class testing
 		blue.AddPoint(new mpoint(488,699), false);
 		
 		
-		BusRoute green = new BusRoute(new Color(255,255,0),5, 3000, 550);
+		BusRoute green = new BusRoute("bus6.png",5, 3000, 550);
 		green.AddPoint(new mpoint(863,7), false);
 		green.AddPoint(new mpoint(870,29), false);
 		green.AddPoint(new mpoint(890,91), true);
@@ -365,7 +365,7 @@ public class testing
 		green.AddPoint(new mpoint(231,701), false);
 		
 			
-		BusRoute Darkgreen = new BusRoute(new Color(150,200,100),5, 3000, 170);
+		BusRoute Darkgreen = new BusRoute("bus7.png",5, 3000, 170);
 		Darkgreen.AddPoint(new mpoint(0,439), false);
 		Darkgreen.AddPoint(new mpoint(90,402), true);
 		Darkgreen.AddPoint(new mpoint(150,381), false);
@@ -381,7 +381,7 @@ public class testing
 		Darkgreen.AddPoint(new mpoint(629,695), false);
 		
 		
-		BusRoute Dark = new BusRoute(new Color(0,0,0),5, 3000, 220);
+		BusRoute Dark = new BusRoute("bus8.png",5, 3000, 220);
 		Dark.AddPoint(new mpoint(1,686), false);
 		Dark.AddPoint(new mpoint(93,626), true);
 		Dark.AddPoint(new mpoint(126,602), false);
@@ -410,7 +410,7 @@ public class testing
 		Dark.AddPoint(new mpoint(996,238), false);
 		
 		
-		BusRoute Lightblue = new BusRoute(new Color(150,200,150),5, 3000, 300);
+		BusRoute Lightblue = new BusRoute("bus9.png",5, 3000, 300);
 		Lightblue.AddPoint(new mpoint(135,704), false); //여기도 130->135로 고침!
 		Lightblue.AddPoint(new mpoint(130,659), false);
 		Lightblue.AddPoint(new mpoint(155,650), false);
@@ -431,7 +431,7 @@ public class testing
 		
 		
 		
-		BusRoute pink = new BusRoute(new Color(200,100,100),5, 3000, 150);
+		BusRoute pink = new BusRoute("bus10.png",5, 3000, 150);
 		pink.AddPoint(new mpoint(793,693), false);
 		pink.AddPoint(new mpoint(803,592), true);
 		pink.AddPoint(new mpoint(868,572), false);
@@ -445,7 +445,7 @@ public class testing
 		
 		
 		
-		BusRoute Darkbrown = new BusRoute(new Color(5,255,5),5, 3000, 250);
+		BusRoute Darkbrown = new BusRoute("bus.png",5, 3000, 250);
 		Darkbrown.AddPoint(new mpoint(987,105), false);
 		Darkbrown.AddPoint(new mpoint(842,172), false);
 		Darkbrown.AddPoint(new mpoint(808,178), true);
