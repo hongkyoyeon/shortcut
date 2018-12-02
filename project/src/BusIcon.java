@@ -16,11 +16,17 @@ public class BusIcon extends JComponent{
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
 	public String Path = "/Users/hong-kyoyeon/Desktop/shortcut/shortcut/project/";
 	public Image img = null;
+	private mpoint Size = new mpoint(50,50);
 	
-	
+	public void SetSize(mpoint size)
+	{
+		Size = size;
+		setSize(size.x, size.y);
+		repaint();
+	}
 	public BusIcon()
 	{
-		setSize(50, 50);
+		SetSize(new mpoint(30,30));
 		setToolTipText("A");
 	}
 	
@@ -41,10 +47,10 @@ public class BusIcon extends JComponent{
 	{
 		g2 = (Graphics2D) g;
 		if (img !=null)
-			g2.drawImage(img,0,0,30,30,this);
+			g2.drawImage(img,0,0,Size.x,Size.y,this);
 	}
 	public void Move(mpoint point)
 	{
-		setLocation(point.x - 15, point.y - 15);
+		setLocation(point.x - Size.x/2, point.y - Size.y/2);
 	}
 }
