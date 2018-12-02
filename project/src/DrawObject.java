@@ -27,10 +27,12 @@ public class DrawObject extends GameObject{
 	{
 		cp.Move(xy);
 	}
+	
 	public void setSize(mpoint size)
 	{
 		cp.SetSize(size);
 	}
+	
 	public void ChangeZ(int z)
 	{
 		this.z = z;
