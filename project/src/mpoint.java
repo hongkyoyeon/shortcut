@@ -14,6 +14,12 @@ public class mpoint {
 	}
 	@Override
     public boolean equals(Object o) {
-       return true;
+       if (o instanceof mpoint)
+       {
+    	   mpoint p2 = (mpoint)o;
+    	   if (this.x == p2.x && this.y == p2.y) return true;
+    	   else return false;
+       }
+       return false;
     }
 }

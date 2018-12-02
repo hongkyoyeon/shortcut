@@ -5,6 +5,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.*;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class testing
 {
@@ -233,6 +238,23 @@ public class testing
 		new edge(new mpoint(931,405),new mpoint(1004,377),15);
 		new edge(new mpoint(915,350),new mpoint(1001,320),15);
 		
+		List<mpoint> path = Dijkstra.Start(new mpoint(0,0), new mpoint(139,158));
+		for(mpoint point : path)
+		{
+			System.out.println("x : " + point.x + "   y : " + point.y);
+		}
+		
+		try
+		{
+			Thread.sleep(11123126);
+		} catch (InterruptedException e)
+		{
+			
+		}
+		
+		
+		
+		
 		System.out.println(edge_point.allitem.size());
 		
 		/*여기서 부터는 offset추가해서 보여지는 지도에서 외곽부분 동그란거 수정*/
@@ -447,7 +469,36 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(803,592), false);
 		Darkbrown.AddPoint(new mpoint(793,693), false);
 		
-		
+		Runnable runnable = new Runnable() {
+
+			
+			double x=0.6;
+			double y=1.4;
+			
+			public void run() {
+				
+				Random random = new Random();
+				double a = Math.random();
+				if(a<0.5){
+					x = x+0.3;
+					y = y+0.3;
+				}
+				else{
+					x = x-0.3;
+					y = y-0.3;
+				}
+				System.out.println(Math.round(a*100)/100.0);
+				System.out.println("x의값:"+x);
+				System.out.println("y의값:"+y);
+				}	
+
+			};
+
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+
+service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
+
+
 		JPanel contentPane;
 		
 		

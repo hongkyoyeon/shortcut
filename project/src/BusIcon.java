@@ -14,7 +14,7 @@ public class BusIcon extends JComponent{
 	public Graphics2D g2;
 	public Color color;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
-	public String Path = "C:\\Users\\seung\\Documents\\Git\\shortcut\\project\\";
+	public String Path = "C:\\Users\\재신\\Desktop\\shortcut\\project\\";
 	public Image img = null;
 	public BusIcon()
 	{

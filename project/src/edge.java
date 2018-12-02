@@ -28,4 +28,15 @@ public class edge {
 		if (edge_p1 == null) return null;
 		return edge_p1.edge_list.get(p2);
 	}
+	public mpoint Other_point(mpoint p1)
+	{
+		if (points[0].equals(p1))
+		{
+			return points[1];
+		}
+		else
+		{
+			return points[0];
+		}
+	}
 }

@@ -44,13 +44,13 @@ public class imageicon extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("\uBC84\uC2A4\uC815\uB958\uC7A51");
+		JButton btnNewButton = new JButton("");
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\\uC7AC\uC2E0\\bus.jpg"));
 		btnNewButton.setBounds(217, 48, 594, 419);
 		panel.add(btnNewButton);
 		btnNewButton.setPreferredSize(new Dimension(200,50));
-		btnNewButton.setToolTipText(" 3ºÐ µÚ 1030 ¹ø ¹ö½º µµÂø!"
-				+ "5ºÐ µÚ 2000 ¹ø ¹ö½º µµÂø!\t"
-				+ "10ºÐµÚ 3000¹ø ¹ö½º µµÂø!\t");
+		btnNewButton.setToolTipText(" 3030 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!"
+				+ "5ï¿½ï¿½ ï¿½ï¿½ 2000 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!\t"
+				+ "10ï¿½Ðµï¿½ 3000ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!\t");
 	}
 }
