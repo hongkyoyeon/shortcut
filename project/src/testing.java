@@ -455,47 +455,7 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(804,539), false);
 		Darkbrown.AddPoint(new mpoint(803,592), false);
 		Darkbrown.AddPoint(new mpoint(793,693), false);
-		
-		
-		Runnable runnable = new Runnable() {
 
-			
-			double x=0.6;
-			double y=1.4;
-			
-			public void run() {
-				
-				Random random = new Random();
-				double a = Math.random();
-				if(a<0.5){
-					x = x+0.3;
-					y = y+0.3;
-				}
-				else{
-					x = x-0.3;
-					y = y-0.3;
-				}
-				System.out.println(Math.round(a*100)/100.0);
-				System.out.println("x의값:"+x);
-				System.out.println("y의값:"+y);
-				}	
-
-			};
-
-		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-
-service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
-
-
-		JPanel contentPane;
-		
-		
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-		
-		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		frame.add(component);
 		frame.setVisible(true);
@@ -516,8 +476,4 @@ service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
 		
 		
 	}
-	private static void setContentPane(JPanel contentPane) {
-		// TODO Auto-generated method stub
-	}
-
 }
