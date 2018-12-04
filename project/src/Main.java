@@ -3,6 +3,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.*;
@@ -38,10 +39,16 @@ public class Main extends GameObject{
 	@Override
 	public void Start()
 	{
+		
+	
+		JPanel panel = new JPanel();
 		label = new JLabel();
-		testing.aframe.add(label);
+		label.setVerticalAlignment(SwingConstants.TOP);
+		label.setHorizontalAlignment(SwingConstants.RIGHT);
+	    testing.aframe.add(label);
+	    
 		testing.aframe.setVisible(true);
-		label.setLocation(1000, 30);
+		
 	}
 	// 1초에 60
 	@Override
