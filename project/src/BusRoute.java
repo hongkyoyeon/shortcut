@@ -1,14 +1,45 @@
 import java.util.ArrayList;
 import java.util.List;
+
+
+
 import java.util.*;
+import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Stroke;
 
 /*
  * 버스 노선을 나타내는 클래스
  * 이 클래스를 이용해서 버스정류장의 위치, 움직이는 경로, 이 노선에 속한 버스(오브젝트), 시작시간, 버스 배차 간격, 버스 정류장 등을 조회할 수 있다.
  */
 
-public class BusRoute {
+public class BusRoute extends DrawObject {
+	public static class Line extends GameDrawComponent
+	{
+		public BusRoute route;
+		public void drawLine(edge e)
+		{
+			g2.drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y);
+		}
+		
+		
+		public void paintComponent(Graphics g)
+		{
+			g2 = (Graphics2D) g;
+			g2.setColor( route.color);
+			Stroke stroke = new BasicStroke(3,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
+			g2.setStroke(stroke);
+			// 그리기
+			for(int i = 0 ; i < route.Path.size() - 1;i++)
+			{
+				mpoint p1 = route.Path.get(i);
+				mpoint p2 = route.Path.get(i + 1);
+				g2.drawLine(p1.x,p1.y,p2.x,p2.y);
+			}
+		}
+	}
 	public Color color; // 버스 노선의 색깔
 	public String img;
 	public List<mpoint> Path = new ArrayList<>(); // 버스의 경로
@@ -24,8 +55,11 @@ public class BusRoute {
 	public boolean RoundTrip = false; // 왕복 버스인가 # 아직 만들지 않음.
 	
 	
-	public BusRoute(String img, int starttime, int endtime, int businterval)
+	public BusRoute(Color color, String img, int starttime, int endtime, int businterval)
 	{
+		super(new Line());
+		((Line)cp).route = this;
+		this.color = color;
 		this.img = img;
 		this.StartTime = starttime;
 		this.EndTime = endtime;
