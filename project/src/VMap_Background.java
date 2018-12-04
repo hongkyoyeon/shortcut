@@ -13,7 +13,7 @@ public class VMap_Background extends DrawObject{
 			public void paintComponent(Graphics g)
 			{
 				g2 = (Graphics2D) g;
-				g.setColor(color = new Color(0,200,255)); 
+				g.setColor(color); 
 				g.fillRect(340,145,170,120);
 				g.fillRect(217,137,123,120);
 				g.fillRect(135,150,90,120);
@@ -32,10 +32,14 @@ public class VMap_Background extends DrawObject{
 				g.fillRect(930,120,75,130);
 			}
 		});
+
+		cp.colors = new Color(0,200,255);
 		SetZ(-15);
 	}
+	int i = 0;
 	public void Update()
 	{
-		
+		i++;
+		cp.colors = new Color(0,200  - (i % 55),255  - (i % 55));
 	}
 }
