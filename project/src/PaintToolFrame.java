@@ -1,10 +1,6 @@
 import java.awt.*;
 import javax.swing.JComponent;
 
-import com.sun.javafx.geom.Line2D;
-import com.sun.javafx.geom.Path2D;
-import com.sun.javafx.geom.Point2D;
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;

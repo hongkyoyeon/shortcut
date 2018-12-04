@@ -3,8 +3,6 @@ import java.awt.*;
 import java.util.HashMap;
 
 import javax.swing.*;
-
-import com.sun.xml.internal.ws.api.Component;
 import java.util.*;
 public class DrawObject extends GameObject{
 	public BusIcon cp;

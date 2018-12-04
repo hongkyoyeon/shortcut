@@ -8,8 +8,6 @@ import java.util.HashMap;
 
 import javax.swing.*;
 
-import sun.java2d.loops.DrawLine;
-
 public class BusIcon extends JComponent{
 	public Graphics2D g2;
 	public Color color;
