@@ -1,4 +1,3 @@
-import com.sun.jmx.snmp.Timestamp;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;

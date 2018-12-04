@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 import javax.swing.*;
 
-import sun.java2d.loops.DrawLine;
 
 public class GameDrawComponent extends JComponent{
 	public Graphics2D g2;
