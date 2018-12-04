@@ -10,7 +10,7 @@ import javax.swing.*;
 
 import sun.java2d.loops.DrawLine;
 
-public class BusIcon extends JComponent{
+public class GameDrawComponent extends JComponent{
 	public Graphics2D g2;
 	public Color color;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
@@ -25,7 +25,7 @@ public class BusIcon extends JComponent{
 		SetPosition(Position);
 		repaint();
 	}
-	public BusIcon()
+	public GameDrawComponent()
 	{
 		SetSize(new mpoint(0,0));
 		setToolTipText("AEE");

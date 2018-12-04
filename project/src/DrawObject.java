@@ -7,14 +7,14 @@ import javax.swing.*;
 import com.sun.xml.internal.ws.api.Component;
 import java.util.*;
 public class DrawObject extends GameObject{
-	public BusIcon cp;
+	public GameDrawComponent cp;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
 	static java.util.List<DrawObject> orders = new ArrayList();
 	int count = 0;
 	int z = 0;
 	public DrawObject()
 	{
-		cp = new BusIcon();
+		cp = new GameDrawComponent();
 		orders.add(this);
 		testing.aframe.add(cp,BorderLayout.CENTER);
 		testing.aframe.setVisible(true);
