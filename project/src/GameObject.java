@@ -2,7 +2,7 @@ import java.util.*;
 public class GameObject {
 	private static List<GameObject> items = new ArrayList<GameObject>();
 	private static List<GameObject> disposed = new ArrayList<GameObject>();
-	private boolean first = false;
+	private boolean first = true;
 	public GameObject()
 	{
 		items.add(this);
@@ -24,7 +24,11 @@ public class GameObject {
 		
 		for(GameObject item: items)
 		{
-			if (item.first) item.Start();
+			if (item.first) 
+			{
+				item.Start();
+				item.first = false;
+			}
 			else item.Update();
 		}
 		

@@ -10,7 +10,7 @@ import java.awt.Color;
 
 public class BusRoute {
 	public Color color; // 버스 노선의 색깔
-	
+	public String img;
 	public List<mpoint> Path = new ArrayList<>(); // 버스의 경로
 	public List<Boolean> Path_Stop = new ArrayList<>(); // 해당 교차로에 버스정류장이 있는지 확인할때 필요함. 버스의 경로 리스트 순서와 일치
 	
@@ -26,6 +26,7 @@ public class BusRoute {
 	
 	public BusRoute(String img, int starttime, int endtime, int businterval)
 	{
+		this.img = img;
 		this.StartTime = starttime;
 		this.EndTime = endtime;
 		this.BusInterval = businterval;
@@ -65,6 +66,28 @@ public class BusRoute {
 			// 이 노선이 포함하는 버스 정류장 목록에 위의 정류장을 연결한다.
 			BusStops.add(stop);
 		}
+	}
+	
+	// 두 point 사이 거리를 반환한다.
+	public double GetDistanceByPoint(double point, int point2)
+	{
+		double result = 0;
+		// 여기서 point는 0 이상이라는 가정이 있다.
+		if (point >= point2) return 0;
+		int Check_point = (int)point;
+		double p = point - (int)point;
+		
+		// 일단 체크포인트에서 p만큼 진행했다고 판단했을때 그만큼 이동한다.
+		// 거리 구하기
+		double temp_d = edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).distance;
+		result += temp_d * (1 - p);
+		Check_point++; // 여기까지 계산이 완료됨
+		while (Check_point != point2)
+		{
+			result += edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).distance;
+			Check_point++;
+		}
+		return result;
 	}
 	public void SetRoundTrip()
 	{
