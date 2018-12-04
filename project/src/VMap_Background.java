@@ -33,13 +33,13 @@ public class VMap_Background extends DrawObject{
 			}
 		});
 
-		cp.colors = new Color(0,200,255);
+		cp.color = new Color(0,200,255);
 		SetZ(-15);
 	}
 	int i = 0;
 	public void Update()
 	{
 		i++;
-		cp.colors = new Color(0,200  - (i % 55),255  - (i % 55));
+		cp.color = new Color(0,200  - (i % 55),255  - (i % 55));
 	}
 }
