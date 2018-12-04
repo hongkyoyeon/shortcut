@@ -66,6 +66,17 @@ public class BusRoute {
 			BusStops.add(stop);
 		}
 	}
+	
+	// 두 point 사이 거리를 반환한다.
+	public double GetDistanceByPoint(double point, int point2)
+	{
+		// 여기서 point는 0 이상이라는 가정이 있다.
+		if (point >= point2) return 0;
+		int Check_point = (int)point;
+		double p = point - (int)point;
+		
+		// 일단 체크포인트에서 p만큼 진행했다고 판단했을때 그만큼 
+	}
 	public void SetRoundTrip()
 	{
 		RoundTrip = true;

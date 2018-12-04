@@ -1,12 +1,15 @@
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.HashMap;
 
 import javax.swing.*;
 
 import com.sun.xml.internal.ws.api.Component;
 import java.util.*;
-public class DrawObject extends GameObject{
+public class DrawObject extends GameObject implements MouseListener{
 	public GameDrawComponent cp;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
 	static java.util.List<DrawObject> orders = new ArrayList();
@@ -15,6 +18,7 @@ public class DrawObject extends GameObject{
 	public DrawObject()
 	{
 		cp = new GameDrawComponent();
+		cp.addMouseListener(this);
 		orders.add(this);
 		testing.aframe.add(cp,BorderLayout.CENTER);
 		testing.aframe.setVisible(true);
@@ -48,6 +52,34 @@ public class DrawObject extends GameObject{
 		testing.aframe.remove(cp);
 		super.Dispose();
 	}
+	
+	
+	
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+    }
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	static class OrderCompare implements Comparator<DrawObject>{
 		 
         @Override

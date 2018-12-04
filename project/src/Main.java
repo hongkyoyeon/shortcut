@@ -11,12 +11,24 @@ import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-public class Main extends GameObject {
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+
+public class Main extends GameObject{
 	JLabel label;
 	float time = 0;
+	public static final int TimeSpeed = 4; // 실제시간 1분이 게임의 몇분인가
+	public static final int MovePixel = 25; // 게임시간 1분에 얼만큼 이동하는가
 	public String GetTime()
 	{
-		return (int)(time /  900 % 24) + "시 " +(int)(time /  15 % 60) + "분 " + (int)((time % 4) * 15) + "초 ";
+		return (int)(time /  900 % 24) + "시 " +(int)(time /  15 % 60) + "분 ";
+	}
+	public static float ConvertTime(int h, int m)
+	{
+		return h * 900 +m * 15;
 	}
 	@Override
 	public void Start()

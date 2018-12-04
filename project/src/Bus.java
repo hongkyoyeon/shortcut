@@ -8,7 +8,6 @@ public class Bus extends DrawObject {
 	public double WhereMove = 0; 			// 어느 정류장에 있는가?? (-이면 아직 출발하지 않았다는것을 의미하고, 1.5이면 (2-1)번째 정류장과 (2)번째 정류장 0.5지점에 있다는 의미
 	public double BusSpeed = 0; 				// 버스가 움직이는 속도. 이 속도는 정류장 사이의 간격에 따라 달라진다. (멀수록 스피드가 작아짐 = 결론적으로 같은 스피드로 보이도록 만들어주는 변수)	
 	// 버스를 실제로 화면위에 나타내는 컴포넌트
-	
 	public Bus(BusRoute route, double start)
 	{
 		
@@ -35,11 +34,29 @@ public class Bus extends DrawObject {
 		// 만약에 거리가 길경우, 정류장을 이동하는 속도가 느려짐 ->그래야 나중에 지도에서 봤을때 긴거리든 짧은거리든 버스가 동일한 속도로 가는거 처럼 보여지기 때문
 		// 즉 1번째 정류장과 2번째 정류장을 지나갈때 거리가 길수록
 		// WhereMove가 1에서 2로 증가하는 속도가 느려진다.
-		BusSpeed =  1 / edge_data.distance;
+		BusSpeed =  1 / (edge_data.distance / (Main.MovePixel * Main.TimeSpeed) * 60);
 	}
 	
-	
-	
+
+	public double Arrival_Time(BusStop busstop)
+	{
+		// 정류장이 몇번째 정류장인지
+		int WhereBusStop = Route.Path.indexOf(busstop.point);
+		if (WhereBusStop < WhereMove) return -1;
+		double time = 0;
+		double CheckP = 0;
+		if (WhereMove < 0)
+		{
+			time += -(int)WhereMove;
+		}
+		else
+		{
+			CheckP = WhereMove;
+		}
+		double distance = Route.GetDistanceByPoint(CheckP, WhereBusStop);
+		time += distance / Main.MovePixel * (60 / Main.TimeSpeed);
+		return time;
+	}
 	
 	//gameobject를 실행하면 쓸 수 있는 함수중에서 어떤 값을 계속해서 갱신해 줘야할때 사용하는 함수인 update을 사용
 	public void Update() 	// 1/60초에 한번씩 갱신되는 함수----------------------(?)

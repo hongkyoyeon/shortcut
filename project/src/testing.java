@@ -25,8 +25,6 @@ public class testing
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-      
-      
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
 		new edge(new mpoint(40, 91),new mpoint(64,174),25);
@@ -459,8 +457,7 @@ public class testing
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		frame.add(component);
 		frame.setVisible(true);
-		
-		new Main();
+		Main main = new Main();
 		while(true)
 		{
 			try
