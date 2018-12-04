@@ -4,6 +4,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import java.awt.event.*; 
 import java.awt.*;
 import java.util.List;
 import java.util.Random;
@@ -11,10 +12,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+
 public class testing
 {
    
    public static JFrame aframe;
+  
    public static void main(String[] args)
    {
 
@@ -25,7 +28,7 @@ public class testing
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-      
+
       
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
@@ -271,12 +274,12 @@ public class testing
 		yellow.AddPoint(new mpoint(337,257), false);
 		yellow.AddPoint(new mpoint(413,267), true);
 		yellow.AddPoint(new mpoint(497,274), false);
-		yellow.AddPoint(new mpoint(633,354), false);
+		yellow.AddPoint(new mpoint(633,354), true);
 		yellow.AddPoint(new mpoint(670,356), false);
 		yellow.AddPoint(new mpoint(716,356), true);
 		yellow.AddPoint(new mpoint(808,347), false);
 		yellow.AddPoint(new mpoint(857,326), false);
-		yellow.AddPoint(new mpoint(892,302), false);
+		yellow.AddPoint(new mpoint(892,302), true);
 		yellow.AddPoint(new mpoint(996,238), false);
 		
 		
@@ -285,7 +288,7 @@ public class testing
 		brown.AddPoint(new mpoint(113,307), true);
 		brown.AddPoint(new mpoint(173,286), false);
 		brown.AddPoint(new mpoint(139,158), false);
-		brown.AddPoint(new mpoint(217,137), false);
+		brown.AddPoint(new mpoint(217,137), true);
 		brown.AddPoint(new mpoint(188,59), false);
 		brown.AddPoint(new mpoint(271,42), false);
 		brown.AddPoint(new mpoint(344,47), false);
@@ -297,7 +300,7 @@ public class testing
 		red.AddPoint(new mpoint(13,193), false);
 		red.AddPoint(new mpoint(64,174), false);
 		red.AddPoint(new mpoint(139,158), false);
-		red.AddPoint(new mpoint(217,137), false);
+		red.AddPoint(new mpoint(217,137), true);
 		red.AddPoint(new mpoint(340,145), false);
 		red.AddPoint(new mpoint(455,142), false);
 		red.AddPoint(new mpoint(527,146), true);
@@ -313,7 +316,7 @@ public class testing
 		purple.AddPoint(new mpoint(524,1), false);
 		purple.AddPoint(new mpoint(525,41), false);
 		purple.AddPoint(new mpoint(527,115), false);
-		purple.AddPoint(new mpoint(527,146), false);
+		purple.AddPoint(new mpoint(527,146), true);
 		purple.AddPoint(new mpoint(497,274), false);
 		purple.AddPoint(new mpoint(489,310), true);
 		purple.AddPoint(new mpoint(612,491), false);
@@ -331,15 +334,15 @@ public class testing
 		blue.AddPoint(new mpoint(620,49), false);
 		blue.AddPoint(new mpoint(631,145), true);
 		blue.AddPoint(new mpoint(527,115), false);
-		blue.AddPoint(new mpoint(527,146), false);
+		blue.AddPoint(new mpoint(527,146), true);
 		blue.AddPoint(new mpoint(497,274), false);
-		blue.AddPoint(new mpoint(489,310), false);
+		blue.AddPoint(new mpoint(489,310), true);
 		blue.AddPoint(new mpoint(430,313), false);
 		blue.AddPoint(new mpoint(364,328), false);
 		blue.AddPoint(new mpoint(389,394), false);
 		blue.AddPoint(new mpoint(396,413), false);
 		blue.AddPoint(new mpoint(416,449), false);
-		blue.AddPoint(new mpoint(454,569), false);
+		blue.AddPoint(new mpoint(454,569), true);
 		blue.AddPoint(new mpoint(464,654), false);
 		blue.AddPoint(new mpoint(488,699), false);
 		
@@ -352,14 +355,14 @@ public class testing
 		green.AddPoint(new mpoint(796,125), false);
 		green.AddPoint(new mpoint(690,142), false);
 		green.AddPoint(new mpoint(660,144), false);
-		green.AddPoint(new mpoint(631,145), false);
+		green.AddPoint(new mpoint(631,145), true);
 		green.AddPoint(new mpoint(633,197), false);
 		green.AddPoint(new mpoint(633,354), true);
 		green.AddPoint(new mpoint(656,465), false);
 		green.AddPoint(new mpoint(612,491), false);
-		green.AddPoint(new mpoint(544,526), false);
-		green.AddPoint(new mpoint(454,569), false);
-		green.AddPoint(new mpoint(362,615), false);
+		green.AddPoint(new mpoint(544,526), true);
+		green.AddPoint(new mpoint(454,569), true);
+		green.AddPoint(new mpoint(362,615), true);
 		green.AddPoint(new mpoint(292,664),false);
 		green.AddPoint(new mpoint(229,683), true);
 		green.AddPoint(new mpoint(231,701), false);
@@ -376,7 +379,7 @@ public class testing
 		Darkgreen.AddPoint(new mpoint(292,664), false);
 		Darkgreen.AddPoint(new mpoint(362,615), true);
 		Darkgreen.AddPoint(new mpoint(454,569), true);
-		Darkgreen.AddPoint(new mpoint(544,526), false);
+		Darkgreen.AddPoint(new mpoint(544,526), true);
 		Darkgreen.AddPoint(new mpoint(578,600), false);
 		Darkgreen.AddPoint(new mpoint(629,695), false);
 		
@@ -389,14 +392,14 @@ public class testing
 		Dark.AddPoint(new mpoint(160,492), false);
 		Dark.AddPoint(new mpoint(203,484), false);
 		Dark.AddPoint(new mpoint(249,472), false);
-		Dark.AddPoint(new mpoint(242,418), false);
+		Dark.AddPoint(new mpoint(242,418), true);
 		Dark.AddPoint(new mpoint(292,406), false);
 		Dark.AddPoint(new mpoint(299,446), false);
 		Dark.AddPoint(new mpoint(396,413), false);
 		Dark.AddPoint(new mpoint(389,394), false);
 		Dark.AddPoint(new mpoint(454,363), false);
 		Dark.AddPoint(new mpoint(485,415), false);
-		Dark.AddPoint(new mpoint(544,526), false);
+		Dark.AddPoint(new mpoint(544,526), true);
 		Dark.AddPoint(new mpoint(612,491), true);
 		Dark.AddPoint(new mpoint(656,465), false);
 		Dark.AddPoint(new mpoint(695,446), false);
@@ -424,8 +427,8 @@ public class testing
 		Lightblue.AddPoint(new mpoint(286,343), true);
 		Lightblue.AddPoint(new mpoint(292,406), false);
 		Lightblue.AddPoint(new mpoint(299,446), false);
-		Lightblue.AddPoint(new mpoint(329,525), false);
-		Lightblue.AddPoint(new mpoint(362,615), false);
+		Lightblue.AddPoint(new mpoint(329,525),true);
+		Lightblue.AddPoint(new mpoint(362,615), true);
 		Lightblue.AddPoint(new mpoint(382,684), false);
 		Lightblue.AddPoint(new mpoint(385,700), false);
 		
@@ -452,9 +455,9 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(857,326), false);
 		Darkbrown.AddPoint(new mpoint(894,431), false);
 		Darkbrown.AddPoint(new mpoint(862,465), false);
-		Darkbrown.AddPoint(new mpoint(797,487), false);
+		Darkbrown.AddPoint(new mpoint(797,487), true);
 		Darkbrown.AddPoint(new mpoint(804,539), false);
-		Darkbrown.AddPoint(new mpoint(803,592), false);
+		Darkbrown.AddPoint(new mpoint(803,592), true);
 		Darkbrown.AddPoint(new mpoint(793,693), false);
 		
 		
@@ -481,11 +484,12 @@ public class testing
 				System.out.println("y의값:"+y);
 				}	
 
+			
 			};
 
 		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
 
-service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
+		service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
 
 
 		JPanel contentPane;
@@ -516,11 +520,14 @@ service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
 			GameObject.NextFrame();
 		}
 		
-		
-		
+		  
 	}
+
+   
 private static void setContentPane(JPanel contentPane) {
 	// TODO Auto-generated method stub
 }
 
 }
+
+
