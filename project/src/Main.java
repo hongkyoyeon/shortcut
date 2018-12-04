@@ -19,14 +19,19 @@ import javax.swing.event.*;
 
 public class Main extends GameObject{
 	JLabel label;
-	float time = 0;
+	double time = 0;
 	public static final int TimeSpeed = 4; // 실제시간 1분이 게임의 몇분인가
-	public static final int MovePixel = 25; // 게임시간 1분에 얼만큼 이동하는가
+	public static final int MovePixel = 25; // 게임시간 1분에 얼만큼 이동하는가 (버스)
+	public static final int MovePixel_Person = 6;  
 	public String GetTime()
 	{
 		return (int)(time /  900 % 24) + "시 " +(int)(time /  15 % 60) + "분 ";
 	}
-	public static float ConvertTime(int h, int m)
+	public static String ConvertString(double time)
+	{
+		return (int)(time /  900 % 24) + "시 " +(int)(time /  15 % 60) + "분 ";
+	}
+	public static double ConvertTime(int h, int m)
 	{
 		return h * 900 +m * 15;
 	}

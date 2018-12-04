@@ -5,8 +5,10 @@ public class BusStop extends DrawObject {
 	{
 		public double time;
 		public Bus bus;
-		public BusItem(Bus bus, double time)
+		public BusRoute route;
+		public BusItem(BusRoute route, Bus bus, double time)
 		{
+			this.route = route;
 			this.bus = bus;
 			this.time = time;
 		}
@@ -37,19 +39,27 @@ public class BusStop extends DrawObject {
 		List<BusItem> items = new ArrayList();
 		for(BusRoute route : routes)
 		{
+			System.out.println("라우트 : " + route.img);
 			for(Bus bus : route.Buses)
 			{
 				double atime = bus.Arrival_Time(this);
 				if (atime - time >= 0)
 				{
-					items.add(new BusItem(bus, atime - time));
+					items.add(new BusItem(route, bus, atime - time));
 				}
 			}
 		}
 		return items;
 	}
 	@Override
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
+		
+		System.out.println("해당 버스정류장의 버스 노선 정보");
+		List<BusItem> items = GetBusList(0);
+		for(BusItem item : items)
+		{
+			System.out.println(item.route.img + Main.ConvertString(item.time));
+		}
 		//메세지 표시
 		// TODO Auto-generated method stub
     }

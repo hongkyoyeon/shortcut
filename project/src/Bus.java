@@ -67,7 +67,7 @@ public class Bus extends DrawObject {
 			if (WhereMove >= 0) // 이제 출발할 시간이 된경우
 			{
 				mpoint p = Route.Path.get(0); // 첫번째 정류장의 위치
-				System.out.println("버스 출발!" + p.x + "  " + p.y);
+				//System.out.println("버스 출발!" + p.x + "  " + p.y);
 				SetPosition(p);
 				SetSize(new mpoint(40,35));
 				SetZ(3000);
@@ -84,7 +84,7 @@ public class Bus extends DrawObject {
 			int now = (int)WhereMove;
 			if (last != now)// 마지막 교차로가 바뀐 경우 (교차를을 지나친경우,즉 교차로에 도착한 경우)
 			{
-				System.out.println("교차로를 지남");
+				//System.out.println("교차로를 지남");
 				SetBusSpeed();
 			}
 			// 움직인 좌표를 기준으로 다시 계산한다.

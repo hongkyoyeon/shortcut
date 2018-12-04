@@ -330,7 +330,7 @@ public class testing
 		blue.AddPoint(new mpoint(527,115), false);
 		blue.AddPoint(new mpoint(527,146), false);
 		blue.AddPoint(new mpoint(497,274), false);
-		blue.AddPoint(new mpoint(489,310), false);
+		blue.AddPoint(new mpoint(489,310), true);
 		blue.AddPoint(new mpoint(430,313), false);
 		blue.AddPoint(new mpoint(364,328), false);
 		blue.AddPoint(new mpoint(389,394), false);
