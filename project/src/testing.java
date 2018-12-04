@@ -460,7 +460,7 @@ public class testing
 		frame.add(component);
 		frame.setVisible(true);
 		
-		
+		new Main();
 		while(true)
 		{
 			try
