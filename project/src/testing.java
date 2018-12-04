@@ -240,8 +240,7 @@ public class testing
 		
 
 		
-		
-		
+
 		
 		System.out.println(edge_point.allitem.size());
 		
@@ -497,8 +496,6 @@ service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
 		setContentPane(contentPane);
 		
 		
-		
-		
 		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
 		frame.add(component);
 		frame.setVisible(true);
@@ -519,8 +516,8 @@ service.scheduleAtFixedRate(runnable, 0, 2, TimeUnit.SECONDS);
 		
 		
 	}
-private static void setContentPane(JPanel contentPane) {
-	// TODO Auto-generated method stub
-}
+	private static void setContentPane(JPanel contentPane) {
+		// TODO Auto-generated method stub
+	}
 
 }
