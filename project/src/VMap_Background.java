@@ -41,5 +41,6 @@ public class VMap_Background extends DrawObject{
 	{
 		i++;
 		cp.color = new Color(0,200  - (i % 55),255  - (i % 55));
+		cp.repaint();
 	}
 }
