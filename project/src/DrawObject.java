@@ -23,17 +23,17 @@ public class DrawObject extends GameObject{
 	{
 		cp.SetImage(file);
 	}
-	public void setLocation(mpoint xy)
+	public void SetPosition(mpoint xy)
 	{
-		cp.Move(xy);
+		cp.SetPosition(xy);
 	}
 	
-	public void setSize(mpoint size)
+	public void SetSize(mpoint size)
 	{
 		cp.SetSize(size);
 	}
 	
-	public void ChangeZ(int z)
+	public void SetZ(int z)
 	{
 		this.z = z;
 		Collections.sort(orders,new OrderCompare());

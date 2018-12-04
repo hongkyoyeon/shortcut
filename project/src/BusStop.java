@@ -7,10 +7,10 @@ public class BusStop extends DrawObject {
 		if (!allitem.containsKey(mpoint))
 		{
 			BusStop newitem = new BusStop();
-			newitem.setLocation(mpoint);
+			newitem.SetPosition(mpoint);
 			newitem.SetImage("bus_stop.jpg");
-			newitem.ChangeZ(1000);
-			newitem.setSize(new mpoint(30, 30));
+			newitem.SetZ(1000);
+			newitem.SetSize(new mpoint(30, 30));
 			allitem.put(mpoint, newitem);
 		}
 		return allitem.get(mpoint);

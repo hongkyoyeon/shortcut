@@ -51,9 +51,9 @@ public class Bus extends DrawObject {
 			{
 				mpoint p = Route.Path.get(0); // 첫번째 정류장의 위치
 				System.out.println("버스 출발!" + p.x + "  " + p.y);
-				setLocation(p);
-				setSize(new mpoint(40,35));
-				ChangeZ(3000);
+				SetPosition(p);
+				SetSize(new mpoint(40,35));
+				SetZ(3000);
 				// 버스 스피드를 계산한다.
 				SetBusSpeed();
 			}
@@ -94,7 +94,7 @@ public class Bus extends DrawObject {
 			mpoint new_p = new mpoint((int)(last_p.x + (now_p.x - last_p.x) * detail),(int)(last_p.y + (now_p.y - last_p.y) * detail));
 			
 			// 실제 버스 컴포넌트의 위치를 갱신한다.
-			setLocation(new_p);
+			SetPosition(new_p);
 			//System.out.println("position " + new_p.x + "  " + new_p.y);
 					
 		}
