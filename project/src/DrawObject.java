@@ -15,7 +15,11 @@ public class DrawObject extends GameObject implements MouseListener{
 	int z = 0;
 	public DrawObject()
 	{
-		cp = new GameDrawComponent();
+		this(new GameDrawComponent());
+	}
+	public DrawObject(GameDrawComponent cp)
+	{
+		this.cp = cp;		
 		cp.addMouseListener(this);
 		orders.add(this);
 		testing.aframe.add(cp,BorderLayout.CENTER);
@@ -39,7 +43,8 @@ public class DrawObject extends GameObject implements MouseListener{
 	{
 		this.z = z;
 		Collections.sort(orders,new OrderCompare());
-		for(int i = 0 ;i < orders.size();i++)
+		int i = 0;
+		for(i = 0 ;i < orders.size();i++)
 		{
 			orders.get(i).cp.getParent().setComponentZOrder(orders.get(i).cp, i);
 		}

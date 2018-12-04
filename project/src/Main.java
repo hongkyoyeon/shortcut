@@ -38,16 +38,13 @@ public class Main extends GameObject{
 	@Override
 	public void Start()
 	{
-		
-	
-		JPanel panel = new JPanel();
 		label = new JLabel();
 		label.setVerticalAlignment(SwingConstants.TOP);
 		label.setHorizontalAlignment(SwingConstants.RIGHT);
 	    testing.aframe.add(label);
 	    
 		testing.aframe.setVisible(true);
-		
+
 	}
 	// 1초에 60
 	@Override

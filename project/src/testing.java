@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 public class testing
 {
-   
-   public static JFrame aframe;
+
+	public static JFrame aframe;
   
    public static void main(String[] args)
    {
@@ -457,8 +457,8 @@ public class testing
 		Darkbrown.AddPoint(new mpoint(803,592), true);
 		Darkbrown.AddPoint(new mpoint(793,693), false);
 
-		PaintToolFrame component = new PaintToolFrame(1,new Color(255,255,255));
-		frame.add(component);
+		new VMap();
+		new VMap_Background();
 		frame.setVisible(true);
 		Main main = new Main();
 		while(true)
