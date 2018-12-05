@@ -71,7 +71,7 @@ public class Dijkstra {
 		    	List<BusStop.BusItem> buses = stop.GetBusList(select_node.cost);
 		    	for(BusStop.BusItem item : buses)
 		    	{
-		    		double time = item.time;
+		    		double time = item.time; // 몇분 기다려야하는
 		    		mpoint p1 = stop.point;
 		    		BusStop nextstop = stop.NextStop(item.route);
 		    		if (nextstop == null) continue;
@@ -83,7 +83,7 @@ public class Dijkstra {
 			    		Dijkstranode newnode = new Dijkstranode(p2);
 				    	nonode.put(p2, newnode); // 확정되지 않은 노드를 넣어준다
 			    	}
-			    	nonode.get(p2).update(select_node, Main.ConvertTime(0, distance / Main.MovePixel), item.bus);
+			    	nonode.get(p2).update(select_node, time + Main.ConvertTime(0, distance / Main.MovePixel), item.bus);
 		    	}
 		    	
 		    }

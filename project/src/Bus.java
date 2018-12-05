@@ -22,7 +22,6 @@ public class Bus extends DrawObject {
 	
 
 	private void SetBusSpeed()
-	
 	{
 		int last = (int)WhereMove; 							// 버스가 지나온 마지막 정류장->(바로 전 정거장?)
 		int now = (int)WhereMove + 1; 								// 버스가 가야할 다음 정류장
@@ -40,7 +39,10 @@ public class Bus extends DrawObject {
 		// 만약에 거리가 길경우, 정류장을 이동하는 속도가 느려짐 ->그래야 나중에 지도에서 봤을때 긴거리든 짧은거리든 버스가 동일한 속도로 가는거 처럼 보여지기 때문
 		// 즉 1번째 정류장과 2번째 정류장을 지나갈때 거리가 길수록
 		// WhereMove가 1에서 2로 증가하는 속도가 느려진다.
-		BusSpeed =  1 / (edge_data.distance / (Main.MovePixel * Main.TimeSpeed) * 60);
+		
+		// 길이가 300이라면 , 1/180이 되야함.       
+		// 길이가 600이면, 1/360이 되야함.
+		BusSpeed =  1 / (d / (Main.MovePixel * Main.TimeSpeed) * 60.0);
 	}
 	
 
@@ -60,7 +62,7 @@ public class Bus extends DrawObject {
 			CheckP = WhereMove;
 		}
 		double distance = Route.GetDistanceByPoint(CheckP, WhereBusStop);
-		time += distance / (Main.MovePixel * Main.TimeSpeed);
+		time += distance / (Main.MovePixel) * 15;
 		return time;
 	}
 	
