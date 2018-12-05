@@ -158,7 +158,6 @@ public class testing
 		new edge(new mpoint(163,703),new mpoint(155,650),15);//여기도 바꿈 (158->163)
 		new edge(new mpoint(135,704),new mpoint(130,659),15);  ////여기 고침!!(130->135)
 		new edge(new mpoint(130,659),new mpoint(155,650),15);
-		
 		new edge(new mpoint(203,484),new mpoint(160,492),15);
 		new edge(new mpoint(203,484),new mpoint(249,472),15);
 		new edge(new mpoint(203,484),new mpoint(229,683),20);
@@ -354,7 +353,7 @@ public class testing
 		purple.AddPoint(new mpoint(633,197), false);
 		purple.AddPoint(new mpoint(633,354), true);
 		purple.AddPoint(new mpoint(656,465), false);
-		purple.AddPoint(new mpoint(612,491), false);
+		purple.AddPoint(new mpoint(612,491), true);
 		purple.AddPoint(new mpoint(544,526), false);
 		purple.AddPoint(new mpoint(454,569), true);
 		purple.AddPoint(new mpoint(362,615), true);
@@ -462,7 +461,7 @@ public class testing
 		{
 			try
 			{
-				Thread.sleep(33);
+				Thread.sleep(16);
 			} catch (InterruptedException e)
 			{
 				
