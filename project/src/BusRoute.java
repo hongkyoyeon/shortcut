@@ -60,6 +60,7 @@ public class BusRoute extends DrawObject {
 		super(new Line());
 		((Line)cp).route = this;
 		this.color = color;
+		this.color = new Color(color.getRed(), color.getGreen(), color.getBlue(), 120);
 		this.img = img;
 		this.StartTime = starttime;
 		this.EndTime = endtime;

@@ -13,31 +13,77 @@ import java.util.*;
 
 public class Person extends DrawObject
 {
-           
-	public double WhereMove = 0; 			
-	public double HumanSpeed = 0; 
-	
-	public List<Person> Persons = new ArrayList<Person>(); //내가 갈 경로!
-	public List<mpoint> Path = new ArrayList<>(); // 나에게 입력된 경로!
-	
-	
-	
-
-	
-	
-	
-	//TestList.add();
-	
-
-
-	
-	public Person( double start)
-	
+	PersonRoute NowRoute = null;
+	List<PersonRoute> Path = new ArrayList();
+	public double speed;
+	public double Wheremove = 0;
+	public void Start()
 	{
-
-		this.WhereMove = 50; 
-		System.out.println(this.WhereMove);
+		List<PersonRoute> node = Dijkstra.Start(new mpoint(0,0), new mpoint(653,561));
+	
+		Path = node;
+		for(PersonRoute item : node)
+		{
+			System.out.print(Main.ConvertString(item.time) + "부터 ");
+			if (item.bus == null)
+				System.out.print("걸어서");
+			else 
+				System.out.print(item.bus.Route.img + "버스를 타고 ");
+			System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
+		}
+		SetImage("boy.png");
+		SetSize(new mpoint(40, 40));
+		SetZ(100000);
 	}
+	public void Update()
+	{
+		if (NowRoute == null && Path.size() > 0)
+		{
+			NowRoute = Path.get(0);
+			Path.remove(NowRoute);
+			if (NowRoute.bus == null)
+			{
+				Wheremove = 0;
+				speed =  1 / (NowRoute.GetEdge().distance / (Main.MovePixel_Person * Main.TimeSpeed) * 60);
+			}
+			else
+			{
+				Wheremove = 0;
+			}
+		}
+		
+		if (NowRoute != null)
+		{
+			// 만약 걸어가는 중이면
+			if (NowRoute.bus == null)
+			{
+				Wheremove += speed;
+				mpoint last_p = NowRoute.StartPoint;
+				mpoint now_p = NowRoute.DestinationPoint;
+				mpoint new_p = new mpoint((int)(last_p.x + (now_p.x - last_p.x) * Wheremove),(int)(last_p.y + (now_p.y - last_p.y) * Wheremove));
+				SetPosition(new_p);
+				if (Wheremove >= 1)
+				{
+					NowRoute = null;
+				}
 	
-	
+			}
+			else // 버스를 타야된다면 
+			{
+					// 버스를 기다린다.
+				int BusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.StartPoint);
+				int EndBusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.DestinationPoint);
+				if (NowRoute.bus.WhereMove > BusStationNO)
+				{
+					SetPosition(NowRoute.bus.Position);
+				}
+				if (NowRoute.bus.WhereMove >= EndBusStationNO) // 내려라
+				{
+
+					NowRoute = null;
+				}
+				// 버스를 타고 있다
+			}
+		}
+	}
 }

@@ -54,7 +54,7 @@ public class Bus extends DrawObject {
 			CheckP = WhereMove;
 		}
 		double distance = Route.GetDistanceByPoint(CheckP, WhereBusStop);
-		time += distance / Main.MovePixel * (60 / Main.TimeSpeed);
+		time += distance / (Main.MovePixel * Main.TimeSpeed);
 		return time;
 	}
 	

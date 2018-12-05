@@ -11,6 +11,7 @@ public class BusStop extends DrawObject {
 			this.route = route;
 			this.bus = bus;
 			this.time = time;
+			
 		}
 	}
 	public List<BusRoute> routes = new ArrayList<BusRoute>();
@@ -33,6 +34,14 @@ public class BusStop extends DrawObject {
 	public void AddRoute(BusRoute data)
 	{
 		routes.add(data);
+	}
+	public BusStop NextStop(BusRoute route)
+	{
+		int no = route.BusStops.indexOf(this);
+		if (route.BusStops.size() > no + 1)
+			return route.BusStops.get(no+1);
+		else
+			return null;
 	}
 	public List<BusItem> GetBusList(double time)
 	{
@@ -58,7 +67,7 @@ public class BusStop extends DrawObject {
 		List<BusItem> items = GetBusList(0);
 		for(BusItem item : items)
 		{
-			System.out.println(item.route.img + Main.ConvertString(item.time));
+			System.out.println(item.route.img + Main.ConvertString(item.time + Main.time));
 		}
 		//메세지 표시
 		// TODO Auto-generated method stub

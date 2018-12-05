@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.util.*;
 public class DrawObject extends GameObject implements MouseListener{
 	public GameDrawComponent cp;
+	public mpoint Position;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
 	static java.util.List<DrawObject> orders = new ArrayList();
 	int count = 0;
@@ -31,6 +32,7 @@ public class DrawObject extends GameObject implements MouseListener{
 	}
 	public void SetPosition(mpoint xy)
 	{
+		this.Position = xy;
 		cp.SetPosition(xy);
 	}
 	
