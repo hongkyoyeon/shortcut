@@ -29,7 +29,7 @@ public class BusRoute extends DrawObject {
 		{
 			g2 = (Graphics2D) g;
 			g2.setColor( route.color);
-			Stroke stroke = new BasicStroke(3,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
+			Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
 			g2.setStroke(stroke);
 			// 그리기
 			for(int i = 0 ; i < route.Path.size() - 1;i++)
@@ -69,6 +69,7 @@ public class BusRoute extends DrawObject {
 		// 이 버스 오브젝트는 실제로는 보이지 않으며 등록만 된 상태이다.
 		// 시작시간이 60이고, 끝나는 시간이 120, 버스 간격이 10이면
 		// 60, 70, 80, 90, 100, 110, 120 뒤에 출발하는 버스들을 미리 만들어둔다.
+		
 		for(int time = StartTime; time <= EndTime; time += BusInterval)
 		{
 			double wheremove = time - StartTime;

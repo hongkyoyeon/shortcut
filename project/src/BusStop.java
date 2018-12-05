@@ -17,20 +17,24 @@ public class BusStop extends DrawObject {
 	public List<BusRoute> routes = new ArrayList<BusRoute>();
 	public mpoint point;
 	public static HashMap<mpoint,BusStop> allitem = new HashMap<mpoint,BusStop>();
+	
 	public static BusStop GetObject(mpoint mpoint)
 	{
+		
 		if (!allitem.containsKey(mpoint))
 		{
 			BusStop newitem = new BusStop();
 			newitem.point = mpoint;
 			newitem.SetPosition(mpoint);
-			newitem.SetImage("bus_stop.jpg");
+			newitem.SetImage("bus-stop.png");
 			newitem.SetZ(1000);
-			newitem.SetSize(new mpoint(30, 30));
+			newitem.SetSize(new mpoint(30, 35));
 			allitem.put(mpoint, newitem);
 		}
+		
 		return allitem.get(mpoint);
 	}
+	
 	public void AddRoute(BusRoute data)
 	{
 		routes.add(data);

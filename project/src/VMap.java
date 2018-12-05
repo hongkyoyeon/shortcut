@@ -57,10 +57,103 @@ public class VMap extends DrawObject{
 				}
 			}
 		});
+		
 		SetZ(-10);
+		DrawObject amuse = new DrawObject();
+	      amuse.SetImage("amuse.png");
+	      amuse.SetPosition(new mpoint(555,480));
+	      amuse.SetSize(new mpoint(50,50));
+	      amuse.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		
+		DrawObject school = new DrawObject();
+		school.SetImage("school.png");
+		school.SetPosition(new mpoint(304,304));
+		school.SetSize(new mpoint(50,50));
+		school.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+
+		DrawObject post = new DrawObject();
+		post.SetImage("post-office.png");
+		post.SetPosition(new mpoint(392,110));
+		post.SetSize(new mpoint(50,50));
+		post.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		DrawObject hospital = new DrawObject();
+		 hospital.SetImage("hospital.png");
+		 hospital.SetPosition(new mpoint(572,91));
+		 hospital.SetSize(new mpoint(50,50));
+		 hospital.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		DrawObject airport = new DrawObject();
+		 airport.SetImage("airport.png");
+		 airport.SetPosition(new mpoint(954,85));
+		 airport.SetSize(new mpoint(40,40));
+		 airport.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		DrawObject house = new DrawObject();
+		house.SetImage("mansion.png");
+		house.SetPosition(new mpoint(387,566));
+		house.SetSize(new mpoint(50,50));
+		house.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		DrawObject market = new DrawObject();
+		market.SetImage("grocery.png");
+		market.SetPosition(new mpoint(62,486));
+		market.SetSize(new mpoint(40,40));
+		market.SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		
+		DrawObject church = new DrawObject();
+		church .SetImage("church2.png");
+		church .SetPosition(new mpoint(295,110));
+		church .SetSize(new mpoint(50,50));
+		church .SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		
+
+		DrawObject church2 = new DrawObject();
+		church2 .SetImage("church.png");
+		church2 .SetPosition(new mpoint(250,640));
+		church2 .SetSize(new mpoint(50,50));
+		church2 .SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		
+		DrawObject temple = new DrawObject();
+		temple .SetImage("temple.png");
+		temple .SetPosition(new mpoint(969,301));
+		temple.SetSize(new mpoint(50,50));
+		temple .SetZ(-9);
+		System.out.println(edge_point.allitem.size());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	public void Update()
 	{
 		
 	}
 }
+
+
+
+
+

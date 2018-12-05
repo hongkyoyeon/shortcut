@@ -3,7 +3,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import java.awt.event.*; 
 import java.awt.*;
 import java.util.List;
@@ -28,6 +27,7 @@ public class testing
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+      
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
 		new edge(new mpoint(40, 91),new mpoint(64,174),25);
@@ -241,9 +241,7 @@ public class testing
 		
 
 		
-
 		
-		System.out.println(edge_point.allitem.size());
 		
 		/*여기서 부터는 offset추가해서 보여지는 지도에서 외곽부분 동그란거 수정*/
 		edge e_p = edge_point.allitem.get(new mpoint(0,0)).edge_list.get(new mpoint(40,91));
