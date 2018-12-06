@@ -28,15 +28,18 @@ public class BusRoute extends DrawObject {
 		public void paintComponent(Graphics g)
 		{
 			g2 = (Graphics2D) g;
-			g2.setColor( route.color);
-			Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
-			g2.setStroke(stroke);
-			// 그리기
-			for(int i = 0 ; i < route.Path.size() - 1;i++)
+			if (route != null && route.color != null)
 			{
-				mpoint p1 = route.Path.get(i);
-				mpoint p2 = route.Path.get(i + 1);
-				g2.drawLine(p1.x,p1.y,p2.x,p2.y);
+				g2.setColor( route.color);
+				Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
+				g2.setStroke(stroke);
+				// 그리기
+				for(int i = 0 ; i < route.Path.size() - 1;i++)
+				{
+					mpoint p1 = route.Path.get(i);
+					mpoint p2 = route.Path.get(i + 1);
+					g2.drawLine(p1.x,p1.y,p2.x,p2.y);
+				}
 			}
 		}
 	}
@@ -72,7 +75,6 @@ public class BusRoute extends DrawObject {
 		for(int time = StartTime; time <= EndTime; time += BusInterval)
 		{
 			double wheremove = time - StartTime;
-			System.out.println("버스 생성 : " + (wheremove / 60) + "초 뒤에 출발 예정");
 			// 버스를 만든다. 버스에는 해당 노선과 출발시간을 적어준다.
 			Bus bus = new Bus(this,wheremove);
 			bus.SetImage(img);

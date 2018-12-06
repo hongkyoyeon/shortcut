@@ -17,7 +17,6 @@ public class Bus extends DrawObject {
 	{
 		this.Route = route;
 		this.WhereMove = -start - 1; // 만약 Start가 60(1초)이면 -60으로 설정됨
-		System.out.println(this.WhereMove);
 	}
 	
 
