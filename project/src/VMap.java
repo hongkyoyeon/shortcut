@@ -6,14 +6,23 @@ import java.awt.event.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
+import java.util.List;
 public class VMap extends DrawObject{
 	Color color;
 	int offset_size = 0;
 	Graphics2D g2;
 	mpoint first;
+	
+	
 	public VMap()
 	{
+		
+		
 		super(new GameDrawComponent(){
+			
+			//List<PersonRoute> Path = new ArrayList();
+			
+			
 			int offset_size = 10;
 			public void drawLine(int x,int y, int x2, int y2, int size)
 			{
@@ -21,7 +30,8 @@ public class VMap extends DrawObject{
 				g2.setStroke(stroke);
 		        g2.drawLine(x,y,x2,y2);
 			}
-			 
+			
+
 			
 			
 			public void drawLine(edge e)
@@ -37,6 +47,7 @@ public class VMap extends DrawObject{
 				{
 					drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y,e.size);
 				}
+				
 			}
 			
 			
@@ -54,6 +65,32 @@ public class VMap extends DrawObject{
 				g2.setColor( new Color(255,255,255));
 				for(edge e : edge.allitem) {
 					drawLine(e);
+				}
+				List<PersonRoute> Path = Person.main_object.Path;
+				
+				for(PersonRoute item2 : Path)
+				{
+			
+					if (item2.bus == null) //걸어가면 
+					{	
+
+						g2.setColor( new Color(0,0,0));
+						PersonRoute a = item2;
+						drawLine(item2.StartPoint.x,2,3,4,2);
+					 drawLine(item.StartPoint.x,item.StartPoint.y,item.DestinationPoint.x,item.DestinationPoint.y,2);
+					}
+					
+					else  //버스타면 
+					{
+						drawLine()
+						
+						
+						
+						
+					}
+						
+						
+						
 				}
 			}
 		});
