@@ -25,7 +25,6 @@ public class VMap_Background extends DrawObject{
 				  g.setColor(color); 
 				  
 				  
-				
 				g.fillRect(340,145,170,120);
 				g.fillRect(217,137,123,120);
 				g.fillRect(135,150,90,120);
