@@ -17,11 +17,11 @@ import javax.swing.*;
 import javax.swing.event.*;
 
 
-public class Main extends GameObject{
+public class Main extends DrawObject{
 	JLabel label;
 	public static double time = 0;
 	public static final int TimeSpeed = 4; // 실제시간 1분이 게임의 몇분인가
-	public static final int MovePixel = 25; // 게임시간 1분에 얼만큼 이동하는가 (버스)
+	public static final int MovePixel = 50; // 게임시간 1분에 얼만큼 이동하는가 (버스)
 	public static final int MovePixel_Person = 6;  
 	public String GetTime()
 	{
@@ -44,7 +44,14 @@ public class Main extends GameObject{
 	    testing.aframe.add(label);
 	    
 		testing.aframe.setVisible(true);
+		SetSize(new mpoint(2000,2000));
+		SetPosition(new mpoint(1000, 1000));
+		SetZ(999999999);
 
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		GameObject.MouseClick(this,e);
 	}
 	// 1초에 60
 	@Override

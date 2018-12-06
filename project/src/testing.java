@@ -455,7 +455,7 @@ public class testing
 		new VMap();
 		new VMap_Background();
 		frame.setVisible(true);
-		Main main = new Main();
+		new Main();
 		new Person();
 		while(true)
 		{

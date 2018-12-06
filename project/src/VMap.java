@@ -59,6 +59,8 @@ public class VMap extends DrawObject{
 		});
 		
 		SetZ(-10);
+		SetSize(new mpoint(2000,2000));
+		SetPosition(new mpoint(1000, 1000));
 		DrawObject amuse = new DrawObject();
 	      amuse.SetImage("amuse.png");
 	      amuse.SetPosition(new mpoint(555,480));
@@ -150,6 +152,24 @@ public class VMap extends DrawObject{
 	public void Update()
 	{
 		
+	}
+	
+	@Override
+	public void mousePressed(MouseEvent e) {
+		edge_point select_p = null;
+		double distance = 0;
+		int x = e.getX();
+		int y = e.getY();
+		for(edge_point p : edge_point.allitem.values())
+		{
+			double d = Math.sqrt((x - p.point.x) * (x - p.point.x) + ( y - p.point.y) * (y - p.point.y));
+			if (select_p == null || distance > d)
+			{
+				distance = d;
+				select_p = p;
+			}
+		}
+		System.out.println("가장 가까운 교차로의 위치는 " + select_p.point.toString() + " 입니다.");
 	}
 }
 
