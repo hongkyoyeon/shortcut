@@ -38,14 +38,20 @@ public class Person extends DrawObject
 		for(PersonRoute item : node)
 		{
 			System.out.print(Main.ConvertString(item.time) + "부터 ");
+			
+			
 			if (item.bus == null)
 				System.out.print("걸어서");
+			
 			else 
+				
 				System.out.print(item.bus.Route.img + "버스를 타고 ");
-			System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
+				System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
+				
 		}
 		SetPosition(p1);
 	}
+	
 	
 	public void Update()
 	{
@@ -64,6 +70,8 @@ public class Person extends DrawObject
 			}
 		}
 		
+		
+	
 		if (NowRoute != null)
 		{
 			// 만약 걸어가는 중이면
@@ -79,10 +87,13 @@ public class Person extends DrawObject
 					NowRoute = null;
 				}
 	
+				
 			}
 			else // 버스를 타야된다면 
 			{
 					// 버스를 기다린다.
+				
+				
 				int BusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.StartPoint);
 				int EndBusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.DestinationPoint);
 				if (NowRoute.bus.WhereMove > BusStationNO)
@@ -97,5 +108,6 @@ public class Person extends DrawObject
 				// 버스를 타고 있다
 			}
 		}
+		
 	}
 }

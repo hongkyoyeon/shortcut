@@ -28,19 +28,6 @@ public class BusRoute extends DrawObject {
 		public void paintComponent(Graphics g)
 		{
 			g2 = (Graphics2D) g;
-			if (route != null && route.color != null)
-			{
-				g2.setColor( route.color);
-				Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
-				g2.setStroke(stroke);
-				// 그리기
-				for(int i = 0 ; i < route.Path.size() - 1;i++)
-				{
-					mpoint p1 = route.Path.get(i);
-					mpoint p2 = route.Path.get(i + 1);
-					g2.drawLine(p1.x,p1.y,p2.x,p2.y);
-				}
-			}
 		}
 	}
 	public Color color; // 버스 노선의 색깔
@@ -127,11 +114,13 @@ public class BusRoute extends DrawObject {
 		}
 		return result;
 	}
+	
 	public void Start()
 	{
 		if (RoundTrip != true)
 		SetRoundTrip();
 	}
+	
 	public void SetRoundTrip()
 	{
 

@@ -12,6 +12,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
+
+
 public class testing
 {
 
@@ -22,11 +24,12 @@ public class testing
 
       JFrame frame =new JFrame();
       aframe = frame;
-      final int width =990;
+      final int width =1300;
       final int height =715;
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+      
       
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
@@ -246,14 +249,14 @@ public class testing
 		edge e_p = edge_point.allitem.get(new mpoint(0,0)).edge_list.get(new mpoint(40,91));
 		edge e_p2 = edge_point.allitem.get(new mpoint(172,2)).edge_list.get(new mpoint(181,29));
 		edge e_p3 = edge_point.allitem.get(new mpoint(13,193)).edge_list.get(new mpoint(0,165));
-		edge e_p4 = edge_point.allitem.get(new mpoint(842,172)).edge_list.get(new mpoint(987,105));
+	//	edge e_p4 = edge_point.allitem.get(new mpoint(842,172)).edge_list.get(new mpoint(987,105));
 		edge e_p5 = edge_point.allitem.get(new mpoint(870,29)).edge_list.get(new mpoint(863,7));
 		edge e_p6 = edge_point.allitem.get(new mpoint(13, 193)).edge_list.get(new mpoint(0,165));
 		
 		e_p.offset = 1;
 		e_p2.offset=1;
 		e_p3.offset=1;
-		e_p4.offset=1;
+	//	e_p4.offset=1;
 		e_p5.offset=1;
 		e_p6.offset=1;
 		
@@ -407,12 +410,12 @@ public class testing
 		Dark.AddPoint(new mpoint(996,238), false);
 		
 		
-		BusRoute white = new BusRoute(Color.white,"bus9.png",5, 6000, 15*45);
+		BusRoute white = new BusRoute(Color.gray,"bus9.png",5, 6000, 15*45);
 		white.AddPoint(new mpoint(135,704), false); //여기도 130->135로 고침!
 		white.AddPoint(new mpoint(130,659), false);
 		white.AddPoint(new mpoint(155,650), false);
 		white.AddPoint(new mpoint(181,642), true);
-		white.AddPoint(new mpoint(167,555), false);
+		white.AddPoint(new mpoint(167,555), false); 
 		white.AddPoint(new mpoint(160,492), false);
 		white.AddPoint(new mpoint(203,484), false);
 		white.AddPoint(new mpoint(249,472), false);

@@ -13,13 +13,12 @@ public class VMap extends DrawObject{
 	Graphics2D g2;
 	mpoint first;
 	
-	
 	public VMap()
 	{
-		
-		
+	
 		super(new GameDrawComponent(){
 			
+			//PersonRoute NowRoute = null;
 			//List<PersonRoute> Path = new ArrayList();
 			
 			
@@ -32,10 +31,15 @@ public class VMap extends DrawObject{
 			}
 			
 
-			
+			public void drawLine2(edge e)
+			{
+
+				drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y,5);
+			}
 			
 			public void drawLine(edge e)
 			{
+				
 				if (e.offset != 0)
 				{
 					double detail = e.offset + 1;
@@ -53,6 +57,9 @@ public class VMap extends DrawObject{
 			
 			public void paintComponent(Graphics g)
 			{
+				
+			
+			
 				g2 = (Graphics2D) g;
 				offset_size = 2;
 				g2.setColor( new Color(0,0,0));
@@ -68,31 +75,40 @@ public class VMap extends DrawObject{
 				}
 				List<PersonRoute> Path = Person.main_object.Path;
 				
-				for(PersonRoute item2 : Path)
+				
+				
+				for(PersonRoute item : Path)
 				{
 			
-					if (item2.bus == null) //걸어가면 
+					if (item.bus  == null) //걸어가면 
 					{	
-
+					
 						g2.setColor( new Color(0,0,0));
-						PersonRoute a = item2;
-						drawLine(item2.StartPoint.x,2,3,4,2);
-					 drawLine(item.StartPoint.x,item.StartPoint.y,item.DestinationPoint.x,item.DestinationPoint.y,2);
+						drawLine( item.StartPoint.x, item.StartPoint.y,item.DestinationPoint.x,item.DestinationPoint.y,5);
 					}
 					
 					else  //버스타면 
 					{
-						drawLine()
+						if (item.bus.Route != null && item.bus.Route.color != null)
+						{
+							g2.setColor( item.bus.Route.color);
+
+							BusRoute route = item.bus.Route;
+							int index = route.Path.indexOf(item.StartPoint);
+							int last_index = route.Path.indexOf(item.DestinationPoint);
+							for(int i = index;i < last_index;i++)
+							{
+
+								drawLine2( edge.GetObject(route.Path.get(i), route.Path.get(i+1)));
+							}
+				
+						}
+
 						
-						
-						
-						
-					}
-						
-						
-						
+				    }
 				}
 			}
+				
 		});
 		
 		SetZ(-10);
