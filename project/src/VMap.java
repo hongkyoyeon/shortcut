@@ -10,7 +10,7 @@ public class VMap extends DrawObject{
 	Color color;
 	int offset_size = 0;
 	Graphics2D g2;
-	
+	mpoint first;
 	public VMap()
 	{
 		super(new GameDrawComponent(){
@@ -149,11 +149,6 @@ public class VMap extends DrawObject{
 		
 		
 	}
-	public void Update()
-	{
-		
-	}
-	
 	@Override
 	public void mousePressed(MouseEvent e) {
 		edge_point select_p = null;
@@ -169,7 +164,20 @@ public class VMap extends DrawObject{
 				select_p = p;
 			}
 		}
+		if (first == null)
+		{
+			first = select_p.point;
+		}
+		else
+		{
+			Person.main_object.StartPath(first, select_p.point);
+			first = null;
+		}
 		System.out.println("가장 가까운 교차로의 위치는 " + select_p.point.toString() + " 입니다.");
+	}
+	public void Update()
+	{
+		
 	}
 }
 

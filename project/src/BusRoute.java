@@ -99,7 +99,8 @@ public class BusRoute extends DrawObject {
 			// 버스 정류장 (생성 or 연결) // GetObject는 없을경우 새로 객체를 만들어서 반환, 이미 존재할경우 기존 오브젝트를 반환하는 함수
 			BusStop stop = BusStop.GetObject(Point);
 			// 해당 버스 정류장에 이 노선을 등록한다.
-			stop.AddRoute(this);
+			if (!stop.routes.contains(this))
+				stop.AddRoute(this);
 			// 이 노선이 포함하는 버스 정류장 목록에 위의 정류장을 연결한다.
 			BusStops.add(stop);
 		}
@@ -128,14 +129,16 @@ public class BusRoute extends DrawObject {
 	}
 	public void Start()
 	{
+		if (RoundTrip != true)
 		SetRoundTrip();
 	}
 	public void SetRoundTrip()
 	{
+
 		RoundTrip = true;
-		BusRoute RoundRoute = this; //new BusRoute(color,img,StartTime,EndTime,BusInterval);
+		BusRoute RoundRoute = new BusRoute(color,img,StartTime,EndTime,BusInterval);
 		int size = Path.size();
-		for(int i = size - 2 ; i >= 0;i--)
+		for(int i = size - 1 ; i >= 0;i--)
 		{
 			RoundRoute.AddPoint(Path.get(i), Path_Stop.get(i));
 		}

@@ -13,14 +13,27 @@ import java.util.*;
 
 public class Person extends DrawObject
 {
+	public static Person main_object;
 	PersonRoute NowRoute = null;
 	List<PersonRoute> Path = new ArrayList();
 	public double speed;
 	public double Wheremove = 0;
+	public Person()
+	{
+		main_object = this;
+	}
 	public void Start()
 	{
-		List<PersonRoute> node = Dijkstra.Start(new mpoint(0,0), new mpoint(653,561));
-	
+		SetImage("boy.png");
+		SetSize(new mpoint(40, 40));
+		SetZ(100000);
+	}
+	public void StartPath(mpoint p1, mpoint p2)
+	{
+		Wheremove = 0;
+		NowRoute = null;
+		List<PersonRoute> node = Dijkstra.Start(p1, p2);
+		
 		Path = node;
 		for(PersonRoute item : node)
 		{
@@ -31,10 +44,9 @@ public class Person extends DrawObject
 				System.out.print(item.bus.Route.img + "버스를 타고 ");
 			System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
 		}
-		SetImage("boy.png");
-		SetSize(new mpoint(40, 40));
-		SetZ(100000);
+		SetPosition(p1);
 	}
+	
 	public void Update()
 	{
 		if (NowRoute == null && Path.size() > 0)
