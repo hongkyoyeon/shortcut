@@ -54,7 +54,6 @@ public class BusRoute extends DrawObject {
 	
 	public boolean RoundTrip = false; // 왕복 버스인가 # 아직 만들지 않음.
 	
-	
 	public BusRoute(Color color, String img, int starttime, int endtime, int businterval)
 	{
 		super(new Line());
@@ -125,9 +124,20 @@ public class BusRoute extends DrawObject {
 		}
 		return result;
 	}
+	public void Start()
+	{
+		SetRoundTrip();
+	}
 	public void SetRoundTrip()
 	{
 		RoundTrip = true;
-		// 만들 예정
+		BusRoute RoundRoute = this; //new BusRoute(color,img,StartTime,EndTime,BusInterval);
+		int size = Path.size();
+		for(int i = size - 2 ; i >= 0;i--)
+		{
+			RoundRoute.AddPoint(Path.get(i), Path_Stop.get(i));
+		}
+		RoundRoute.RoundTrip = true;
+		// 똑같은 버스 노선을 복사한다. 방향은 반대로
 	}
 }

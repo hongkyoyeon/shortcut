@@ -22,8 +22,9 @@ public class GameObject {
 	public static void NextFrame()
 	{
 		
-		for(GameObject item: items)
+		for(int i = 0 ; i < items.size(); i++)
 		{
+			GameObject item = items.get(i);
 			if (item.first) 
 			{
 				item.Start();
