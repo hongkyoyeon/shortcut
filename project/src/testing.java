@@ -460,8 +460,6 @@ public class testing
 		frame.setVisible(true);
 		new Main();
 		new Person();
-		DrawLabelObject label = new DrawLabelObject();
-		label.SetText("Asdfsdf");
 		while(true)
 		{
 			try
