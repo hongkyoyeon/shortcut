@@ -464,39 +464,7 @@ public class VMap extends DrawObject{
 		bench9.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
-		/*
-		DrawObject bench12= new DrawObject();
-		bench12.SetImage("bench.png");
-		bench12.SetPosition(new mpoint(310,69));
-		bench12.SetSize(new mpoint(20,20));
-		bench12.SetZ(-9);
-		System.out.println(edge_point.allitem.size());
-		
-		
-		DrawObject bench10= new DrawObject();
-		bench10.SetImage("bench.png");
-		bench10.SetPosition(new mpoint(310,69));
-		bench10.SetSize(new mpoint(20,20));
-		bench10.SetZ(-9);
-		System.out.println(edge_point.allitem.size());
-		
-		
-		DrawObject bench11= new DrawObject();
-		bench11.SetImage("bench.png");
-		bench11.SetPosition(new mpoint(310,69));
-		bench11.SetSize(new mpoint(20,20));
-		bench11.SetZ(-9);
-		System.out.println(edge_point.allitem.size());
-		
-		
-		DrawObject bench13= new DrawObject();
-		bench13.SetImage("bench.png");
-		bench13.SetPosition(new mpoint(310,69));
-		bench13.SetSize(new mpoint(20,20));
-		bench13.SetZ(-9);
-		System.out.println(edge_point.allitem.size());
-		
-*/
+
 		
 	}
 	@Override
@@ -506,6 +474,7 @@ public class VMap extends DrawObject{
 		int x = e.getX();
 		int y = e.getY();
 		for(edge_point p : edge_point.allitem.values())
+			
 		{
 			double d = Math.sqrt((x - p.point.x) * (x - p.point.x) + ( y - p.point.y) * (y - p.point.y));
 			if (select_p == null || distance > d)
@@ -514,16 +483,18 @@ public class VMap extends DrawObject{
 				select_p = p;
 			}
 		}
+		
 		if (first == null)
 		{
 			first = select_p.point;
 		}
+		
 		else
 		{
 			Person.main_object.StartPath(first, select_p.point);
 			first = null;
 		}
-		System.out.println("가장 가까운 교차로의 위치는 " + select_p.point.toString() + " 입니다.");
+		//System.out.println("가장 가까운 교차로의 위치는 " + select_p.point.toString() + " 입니다.");
 	}
 	public void Update()
 	{

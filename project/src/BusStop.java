@@ -52,7 +52,7 @@ public class BusStop extends DrawObject {
 		List<BusItem> items = new ArrayList();
 		for(BusRoute route : routes)
 		{
-			System.out.println("라우트 : " + route.img);
+			//System.out.println("라우트 : " + route.img);
 			for(Bus bus : route.Buses)
 			{
 				double atime = bus.Arrival_Time(this);

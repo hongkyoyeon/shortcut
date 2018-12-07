@@ -7,12 +7,16 @@ import java.awt.image.ImageObserver;
 
 import javax.swing.*;
 
+import com.sun.org.apache.xpath.internal.operations.Equals;
+
 import java.awt.event.MouseEvent;
 import java.util.*;
 
 
 public class Person extends DrawObject
 {
+	public static String num=null;
+
 	public static Person main_object;
 	PersonRoute NowRoute = null;
 	List<PersonRoute> Path = new ArrayList();
@@ -37,18 +41,28 @@ public class Person extends DrawObject
 		Path = node;
 		for(PersonRoute item : node)
 		{
-			System.out.print(Main.ConvertString(item.time) + "부터 ");
+		
+		
 			
-			
+			 //JLabel label = new JLabel( Main.ConvertString(item.time), JLabel.RIGHT);
+		
 			if (item.bus == null)
-				System.out.print("걸어서");
+				System.out.println("걸어서 이동");
 			
 			else 
-				
+			{
+		
+				System.out.print("출발 후 "+Main.ConvertString(item.time) + " 부터 ");
 				System.out.print(item.bus.Route.img + "버스를 타고 ");
 				System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
+				//   num = item.bus.Route.img;
+				
+			
+				// JLabel label3 = new JLabel( item.DestinationPoint.toString(), JLabel.RIGHT);
+			}
 				
 		}
+		
 		SetPosition(p1);
 	}
 	
@@ -86,14 +100,11 @@ public class Person extends DrawObject
 				{
 					NowRoute = null;
 				}
-	
-				
 			}
 			else // 버스를 타야된다면 
 			{
 					// 버스를 기다린다.
-				
-				
+			
 				int BusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.StartPoint);
 				int EndBusStationNO = NowRoute.bus.Route.Path.indexOf(NowRoute.DestinationPoint);
 				if (NowRoute.bus.WhereMove > BusStationNO)

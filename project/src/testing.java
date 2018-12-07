@@ -1,7 +1,10 @@
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.*; 
 import java.awt.*;
@@ -13,23 +16,40 @@ import java.util.concurrent.TimeUnit;
 
 
 
+	
 
 public class testing
 {
-
+	public static String num="hello1"; //내가 임의로 설정
+	public static String num2="hello2"; 
 	public static JFrame aframe;
-  
+
    public static void main(String[] args)
    {
-
+	   
       JFrame frame =new JFrame();
       aframe = frame;
-      final int width =1300;
+      final int width =1100;
       final int height =715;
+      String a=null;
+     // frame.pack();
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-      
+		 Container c = frame.getContentPane();
+		  JLabel label2 = new JLabel( num+"text"+num2, JLabel.RIGHT);
+	    //  JLabel label = new JLabel( "testing", JLabel.RIGHT);
+	    //  label.setText("settext");
+	    //  label.setBounds(3000, 2005, 20,50);
+	      frame.add(label2);
+			// frame.add(label);
+			
+			 
+		     frame.setVisible(true);
+	  
+		     
+     
+
       
       /*지도 만드는 좌표를 mpoint로 연결*/
 		new edge(new mpoint(40, 91),new mpoint(0,0),25);
@@ -457,9 +477,12 @@ public class testing
 
 		new VMap();
 		new VMap_Background();
-		frame.setVisible(true);
 		new Main();
 		new Person();
+		
+	  	
+	
+		
 		while(true)
 		{
 			try
@@ -471,6 +494,7 @@ public class testing
 			}
 			GameObject.NextFrame();
 		}
+		
 		
 		  
 	}

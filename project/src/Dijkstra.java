@@ -7,7 +7,7 @@ public class Dijkstra {
 		Bus bus = null;
 		public Dijkstranode(mpoint point){
 			this.position = point;
-			System.out.println("새로운 노드" + point.toString());
+			//System.out.println("새로운 노드" + point.toString());
 		}
 		public void update(Dijkstranode newnode, double newcost, Bus bus){
 			if(parent == null || newnode.cost + newcost < cost)
@@ -15,7 +15,7 @@ public class Dijkstra {
 				this.bus = bus;
 				parent = newnode;
 				cost = parent.cost + newcost;
-				System.out.println(position.toString()+"노드 갱신" + newnode.position.toString());
+			//	System.out.println(position.toString()+"노드 갱신" + newnode.position.toString());
 			}
 		}
 	}
