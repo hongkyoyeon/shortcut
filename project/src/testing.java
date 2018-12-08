@@ -20,28 +20,21 @@ public class testing
 	public static String num="hello1"; //내가 임의로 설정
 	public static String num2="hello2"; 
 	public static JFrame aframe;
+	
 
    public static void main(String[] args)
    {
 	   
       JFrame frame =new JFrame();
       aframe = frame;
-      final int width =1100;
+      final int width =980;
       final int height =715;
       String a=null;
-     // frame.pack();
+    
       frame.setSize(width,height);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		 Container c = frame.getContentPane();
-		  JLabel label2 = new JLabel( num+"text"+num2, JLabel.RIGHT);
-	    //  JLabel label = new JLabel( "testing", JLabel.RIGHT);
-	    //  label.setText("settext");
-	    //  label.setBounds(3000, 2005, 20,50);
-	      frame.add(label2);
-			// frame.add(label);
-			
-			 
+		
 		     frame.setVisible(true);
 	  
 		     
@@ -484,7 +477,7 @@ public class testing
 		{
 			try
 			{
-				Thread.sleep(16);
+				Thread.sleep(30);
 			} catch (InterruptedException e)
 			{
 				

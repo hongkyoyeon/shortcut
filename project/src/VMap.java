@@ -61,8 +61,8 @@ public class VMap extends DrawObject{
 			
 			
 				g2 = (Graphics2D) g;
-				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, 
-		                RenderingHints.VALUE_ANTIALIAS_ON); 
+				//g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, 
+		        //        RenderingHints.VALUE_ANTIALIAS_ON); 
 				offset_size = 2;
 				g2.setColor( new Color(0,0,0));
 				for(edge e : edge.allitem) {
@@ -158,7 +158,7 @@ public class VMap extends DrawObject{
 		
 		DrawObject amuse = new DrawObject();
 	      amuse.SetImage("amuse.png");
-	      amuse.SetPosition(new mpoint(555,480));
+	      amuse.SetPosition(new mpoint(555,475));
 	      amuse.SetSize(new mpoint(50,50));
 	      amuse.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
@@ -166,7 +166,7 @@ public class VMap extends DrawObject{
 		
 		DrawObject school = new DrawObject();
 		school.SetImage("school.png");
-		school.SetPosition(new mpoint(304,304));
+		school.SetPosition(new mpoint(304,305));
 		school.SetSize(new mpoint(50,50));
 		school.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
@@ -174,14 +174,14 @@ public class VMap extends DrawObject{
 
 		DrawObject post = new DrawObject();
 		post.SetImage("post-office.png");
-		post.SetPosition(new mpoint(392,110));
+		post.SetPosition(new mpoint(392,105));
 		post.SetSize(new mpoint(50,50));
 		post.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
 		DrawObject hospital = new DrawObject();
 		 hospital.SetImage("hospital.png");
-		 hospital.SetPosition(new mpoint(572,91));
+		 hospital.SetPosition(new mpoint(572,85));
 		 hospital.SetSize(new mpoint(50,50));
 		 hospital.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
@@ -195,14 +195,14 @@ public class VMap extends DrawObject{
 		
 		DrawObject house = new DrawObject();
 		house.SetImage("mansion.png");
-		house.SetPosition(new mpoint(386,566));
+		house.SetPosition(new mpoint(386,560));
 		house.SetSize(new mpoint(50,50));
 		house.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
 		DrawObject market = new DrawObject();
 		market.SetImage("grocery.png");
-		market.SetPosition(new mpoint(80,486));
+		market.SetPosition(new mpoint(78,482));
 		market.SetSize(new mpoint(40,40));
 		market.SetZ(-9);
 		System.out.println(edge_point.allitem.size());
@@ -210,28 +210,28 @@ public class VMap extends DrawObject{
 		
 		DrawObject church = new DrawObject();
 		church .SetImage("church2.png");
-		church .SetPosition(new mpoint(295,110));
+		church .SetPosition(new mpoint(295,100));
 		church .SetSize(new mpoint(50,50));
 		church .SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
 		DrawObject church2 = new DrawObject();
 		church2 .SetImage("church.png");
-		church2 .SetPosition(new mpoint(250,640));
+		church2 .SetPosition(new mpoint(250,630));
 		church2 .SetSize(new mpoint(50,50));
 		church2 .SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
 		DrawObject industry = new DrawObject();
 		industry .SetImage("industry.png");
-		industry .SetPosition(new mpoint(493,605));
+		industry .SetPosition(new mpoint(493,600));
 		industry.SetSize(new mpoint(50,50));
 		industry .SetZ(-9);
 		System.out.println(edge_point.allitem.size());
 		
 		DrawObject temple = new DrawObject();
 		temple .SetImage("temple.png");
-		temple .SetPosition(new mpoint(936,310));
+		temple .SetPosition(new mpoint(936,304));
 		temple.SetSize(new mpoint(50,50));
 		temple .SetZ(-9);
 		System.out.println(edge_point.allitem.size());
@@ -259,7 +259,7 @@ public class VMap extends DrawObject{
 
 		DrawObject hotel= new DrawObject();
 		hotel.SetImage("hotel.png");
-		hotel.SetPosition(new mpoint(950,377));
+		hotel.SetPosition(new mpoint(950,374));
 		hotel.SetSize(new mpoint(30,30));
 		hotel.SetZ(-9);
 		System.out.println(edge_point.allitem.size());	

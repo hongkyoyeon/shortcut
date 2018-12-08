@@ -42,9 +42,7 @@ public class Person extends DrawObject
 		for(PersonRoute item : node)
 		{
 		
-		
-			
-			 //JLabel label = new JLabel( Main.ConvertString(item.time), JLabel.RIGHT);
+
 		
 			if (item.bus == null)
 				System.out.println("걸어서 이동");
@@ -55,10 +53,7 @@ public class Person extends DrawObject
 				System.out.print("출발 후 "+Main.ConvertString(item.time) + " 부터 ");
 				System.out.print(item.bus.Route.img + "버스를 타고 ");
 				System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
-				//   num = item.bus.Route.img;
-				
 			
-				// JLabel label3 = new JLabel( item.DestinationPoint.toString(), JLabel.RIGHT);
 			}
 				
 		}
