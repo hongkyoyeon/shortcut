@@ -66,14 +66,7 @@ public class VMap extends DrawObject{
 				offset_size = 2;
 				g2.setColor( new Color(0,0,0));
 				for(edge e : edge.allitem) {
-					if (e.congest >= 3)
-					{
-						g2.setColor( new Color(255,0,0));
-					}
-					else
-					{
-						g2.setColor( new Color((int)((e.congest - 1) * 125),(int)((3.0-e.congest) * 125),0));
-					}
+					g2.setColor( new Color((int)((e.GetCongest() - 1) * 125),(int)((3.0-e.GetCongest()) * 125),0));
 					drawLine(e);
 				}
 				

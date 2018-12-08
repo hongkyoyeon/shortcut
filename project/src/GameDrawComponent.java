@@ -13,7 +13,7 @@ public class GameDrawComponent extends JComponent{
 	public Graphics2D g2;
 	public Color color;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
-	public String Path = "/Users/hong-kyoyeon/Desktop/shortcut/shortcut/project/";
+	public String Path = "C:\\Users\\seung\\Documents\\Git\\shortcut\\project\\";
 	public Image img = null;
 	private mpoint Size = new mpoint(50,50);
 	private mpoint Position = new mpoint(0,0);
