@@ -20,6 +20,7 @@ import javax.swing.event.*;
 public class Main extends DrawObject{
 	JLabel label;
 	public static double time = 0;
+	public static int next_time = 1;
 	public static final int TimeSpeed = 4; // 실제시간 1분이 게임의 몇분인가
 	public static final int MovePixel = 50; // 게임시간 1분에 얼만큼 이동하는가 (버스)
 	public static final int MovePixel_Person = 12;  
@@ -59,6 +60,15 @@ public class Main extends DrawObject{
 	{
 		time += 1;
 		label.setText(GetTime());
+		
+		if (next_time == 0)
+		{
+			next_time = new Random().nextInt(120);
+			new CongestObject();
+		
+		}
+		next_time--;
+		// 일정 시간마다 랜덤으로 혼잡 구역이 생김
 		
 	}
 }

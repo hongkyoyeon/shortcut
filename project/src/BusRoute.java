@@ -24,7 +24,6 @@ public class BusRoute extends DrawObject {
 			g2.drawLine(e.points[0].x,e.points[0].y,e.points[1].x,e.points[1].y);
 		}
 		
-		
 		public void paintComponent(Graphics g)
 		{
 			g2 = (Graphics2D) g;
@@ -104,12 +103,12 @@ public class BusRoute extends DrawObject {
 		
 		// 일단 체크포인트에서 p만큼 진행했다고 판단했을때 그만큼 이동한다.
 		// 거리 구하기
-		double temp_d = edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).distance;
+		double temp_d = edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).GetCongestDistance();
 		result += temp_d * (1 - p);
 		Check_point++; // 여기까지 계산이 완료됨
 		while (Check_point != point2)
 		{
-			result += edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).distance;
+			result += edge.GetObject(Path.get(Check_point),Path.get(Check_point + 1)).GetCongestDistance();
 			Check_point++;
 		}
 		return result;

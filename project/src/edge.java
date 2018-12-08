@@ -6,6 +6,7 @@ public class edge {
 	public int size = 0;
 	public double distance;
 	public double offset = 0;
+	public double congest = 1;
 	public edge(mpoint p1, mpoint p2, int size)
 	{
 		
@@ -20,7 +21,15 @@ public class edge {
 		edge_point.allitem.get(p1).edge_list.put(p2, this);
 		edge_point.allitem.get(p2).edge_list.put(p1, this);
 	}
-	
+	public double GetCongest()
+	{
+		if (congest >= 3) return 3;
+		else return congest;
+	}
+	public double GetCongestDistance()
+	{
+		return distance * GetCongest();
+	}
 	public static edge GetObject(mpoint p1, mpoint p2)
 	{
 		// 포인트1에 위치한 교차로 찾기

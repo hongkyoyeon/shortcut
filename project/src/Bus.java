@@ -33,7 +33,7 @@ public class Bus extends DrawObject {
 		// 버스가 지나가고 있는 도로 (p_last교차로와 연결된 도로중 p_now 교차로와 연결된 도로를 찾는다)
 		edge edge_data = p_last.edge_list.get(p_now.point);
 		// 교차로의 길이
-		double d = edge_data.distance;
+		double d = edge_data.GetCongestDistance();
 		// 버스 스피드로 나눈다.
 		// 만약에 거리가 길경우, 정류장을 이동하는 속도가 느려짐 ->그래야 나중에 지도에서 봤을때 긴거리든 짧은거리든 버스가 동일한 속도로 가는거 처럼 보여지기 때문
 		// 즉 1번째 정류장과 2번째 정류장을 지나갈때 거리가 길수록

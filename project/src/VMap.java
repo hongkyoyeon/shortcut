@@ -61,9 +61,19 @@ public class VMap extends DrawObject{
 			
 			
 				g2 = (Graphics2D) g;
+				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, 
+		                RenderingHints.VALUE_ANTIALIAS_ON); 
 				offset_size = 2;
 				g2.setColor( new Color(0,0,0));
 				for(edge e : edge.allitem) {
+					if (e.congest >= 3)
+					{
+						g2.setColor( new Color(255,0,0));
+					}
+					else
+					{
+						g2.setColor( new Color((int)((e.congest - 1) * 125),(int)((3.0-e.congest) * 125),0));
+					}
 					drawLine(e);
 				}
 				
@@ -73,67 +83,70 @@ public class VMap extends DrawObject{
 				for(edge e : edge.allitem) {
 					drawLine(e);
 				}
-				List<PersonRoute> Path = Person.main_object.Path;
-				PersonRoute item2 = Person.main_object.NowRoute;
-				if (item2 != null)
+				if (Person.main_object != null)
 				{
-					if (item2.bus  == null) //걸어가면 
-					{	
-					
-						g2.setColor( new Color(0,0,0));
-						drawLine( item2.StartPoint.x, item2.StartPoint.y,item2.DestinationPoint.x,item2.DestinationPoint.y,5);
-					}
-					
-					else  //버스타면 
+					List<PersonRoute> Path = Person.main_object.Path;
+					PersonRoute item2 = Person.main_object.NowRoute;
+					if (item2 != null)
 					{
-						if (item2.bus.Route != null && item2.bus.Route.color != null)
-						{
-							g2.setColor( item2.bus.Route.color);
-	
-							BusRoute route = item2.bus.Route;
-							int index = route.Path.indexOf(item2.StartPoint);
-							int last_index = route.Path.indexOf(item2.DestinationPoint);
-							for(int i = index;i < last_index;i++)
-							{
-	
-								drawLine2( edge.GetObject(route.Path.get(i), route.Path.get(i+1)));
-							}
-				
-						}
-	
+						if (item2.bus  == null) //걸어가면 
+						{	
 						
-				    }
-				
-				}
-				for(PersonRoute item : Path)
-				{
-			
-					if (item.bus  == null) //걸어가면 
-					{	
+							g2.setColor( new Color(0,0,0));
+							drawLine( item2.StartPoint.x, item2.StartPoint.y,item2.DestinationPoint.x,item2.DestinationPoint.y,5);
+						}
+						
+						else  //버스타면 
+						{
+							if (item2.bus.Route != null && item2.bus.Route.color != null)
+							{
+								g2.setColor( item2.bus.Route.color);
+		
+								BusRoute route = item2.bus.Route;
+								int index = route.Path.indexOf(item2.StartPoint);
+								int last_index = route.Path.indexOf(item2.DestinationPoint);
+								for(int i = index;i < last_index;i++)
+								{
+		
+									drawLine2( edge.GetObject(route.Path.get(i), route.Path.get(i+1)));
+								}
 					
-						g2.setColor( new Color(0,0,0));
-						drawLine( item.StartPoint.x, item.StartPoint.y,item.DestinationPoint.x,item.DestinationPoint.y,5);
+							}
+		
+							
+					    }
+					
 					}
-					
-					else  //버스타면 
+					for(PersonRoute item : Path)
 					{
-						if (item.bus.Route != null && item.bus.Route.color != null)
-						{
-							g2.setColor( item.bus.Route.color);
-
-							BusRoute route = item.bus.Route;
-							int index = route.Path.indexOf(item.StartPoint);
-							int last_index = route.Path.indexOf(item.DestinationPoint);
-							for(int i = index;i < last_index;i++)
-							{
-
-								drawLine2( edge.GetObject(route.Path.get(i), route.Path.get(i+1)));
-							}
 				
-						}
-
+						if (item.bus  == null) //걸어가면 
+						{	
 						
-				    }
+							g2.setColor( new Color(0,0,0));
+							drawLine( item.StartPoint.x, item.StartPoint.y,item.DestinationPoint.x,item.DestinationPoint.y,5);
+						}
+						
+						else  //버스타면 
+						{
+							if (item.bus.Route != null && item.bus.Route.color != null)
+							{
+								g2.setColor( item.bus.Route.color);
+	
+								BusRoute route = item.bus.Route;
+								int index = route.Path.indexOf(item.StartPoint);
+								int last_index = route.Path.indexOf(item.DestinationPoint);
+								for(int i = index;i < last_index;i++)
+								{
+	
+									drawLine2( edge.GetObject(route.Path.get(i), route.Path.get(i+1)));
+								}
+					
+							}
+	
+							
+					    }
+					}
 				}
 			}
 				
