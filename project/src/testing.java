@@ -15,9 +15,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
-
-	
-
 public class testing
 {
 	public static String num="hello1"; //내가 임의로 설정
