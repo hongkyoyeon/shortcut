@@ -6,7 +6,7 @@ public class edge {
 	public int size = 0;
 	public double distance;
 	public double offset = 0;
-	public double congest = 1;
+	private double congest = 1;
 	public edge(mpoint p1, mpoint p2, int size)
 	{
 		
@@ -25,6 +25,10 @@ public class edge {
 	{
 		if (congest >= 3) return 3;
 		else return congest;
+	}
+	public void AddCongest(double p)
+	{
+		congest+= p;
 	}
 	public double GetCongestDistance()
 	{

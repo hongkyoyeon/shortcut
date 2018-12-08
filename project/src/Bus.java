@@ -94,6 +94,7 @@ public class Bus extends DrawObject {
 			{
 				//System.out.println("교차로를 지남");
 				SetBusSpeed();
+				WhereMove = (int)WhereMove;
 			}
 			// 움직인 좌표를 기준으로 다시 계산한다.
 			// 내가 지나온 마지막 교차로

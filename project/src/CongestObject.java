@@ -24,22 +24,25 @@ public class CongestObject extends GameObject {
 	
 	public void Update()
 	{
-		// 0~599
-		if (time < 1200)
+		if (Person.main_object != null && Person.main_object.NowRoute == null)
 		{
-			if (time % 20 == 0)
+			// 0~599
+			if (time < 1200)
 			{
-				for(edge item : edges)
+				if (time % 20 == 0)
 				{
-					if (time < 600)
-						item.congest += 0.02;
-					else
-						item.congest -= 0.02;
+					for(edge item : edges)
+					{
+						if (time < 600)
+							item.AddCongest(0.02);
+						else
+							item.AddCongest(-0.02);
+					}
 				}
 			}
+			if (time == 1200) Dispose();
+			time++;
 		}
-		if (time == 1200) Dispose();
-		time++;
 	}
 	
 }
