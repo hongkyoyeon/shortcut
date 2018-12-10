@@ -69,6 +69,11 @@ public class Dijkstra {
 		    {
 		    	BusStop stop = BusStop.GetObject(select_node.position);
 		    	List<BusStop.BusItem> buses = stop.GetBusList(select_node.cost);
+		    	// 내가 버스를 타고 온경우 다음 경로까지도 바로 갈수 있다.
+		    	if (select_node.bus != null)
+		    	{
+		    		buses.add(new BusStop.BusItem(select_node.bus.Route, select_node.bus, 0));
+		    	}
 		    	for(BusStop.BusItem item : buses)
 		    	{
 		    		double time = item.time; // 몇분 기다려야하는

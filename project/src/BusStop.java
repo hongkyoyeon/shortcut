@@ -1,7 +1,7 @@
 import java.awt.event.MouseEvent;
 import java.util.*;
 public class BusStop extends DrawObject {
-	public class BusItem
+	public static class BusItem
 	{
 		public double time;
 		public Bus bus;
