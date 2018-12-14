@@ -45,16 +45,16 @@ public class Person extends DrawObject
 
 		
 			if (item.bus == null)
-				System.out.println("걸어서 이동");
-			
+			{
+				System.out.print("출발 후 "+Main.ConvertString(item.time) + " 부터 걸어서");
+			}
 			else 
 			{
 		
 				System.out.print("출발 후 "+Main.ConvertString(item.time) + " 부터 ");
 				System.out.print(item.bus.Route.img + "버스를 타고 ");
-				System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
-			
 			}
+			System.out.println(item.DestinationPoint.toString() + "까지 이동한다.");
 				
 		}
 		

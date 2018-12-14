@@ -19,7 +19,6 @@ public class CongestObject extends GameObject {
 				}
 			}
 		}
-		System.out.println(edges.size());
 	}
 	
 	public void Update()

@@ -71,7 +71,7 @@ public class BusStop extends DrawObject {
 		List<BusItem> items = GetBusList(0);
 		for(BusItem item : items)
 		{
-			System.out.println(Main.ConvertString(item.time) + "A" + Main.ConvertString(Main.time) + "S" + Main.ConvertString(item.time + Main.time));
+			System.out.println(item.route.img + "버스가 " +  Main.ConvertString(item.time) + "분 뒤에 도착 예정");
 		}
 		//메세지 표시
 		// TODO Auto-generated method stub

@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.ImageObserver;
+import java.net.URL;
 import java.util.HashMap;
 
 import javax.swing.*;
@@ -13,7 +14,6 @@ public class GameDrawComponent extends JComponent{
 	public Graphics2D g2;
 	public Color color;
 	HashMap<String, Image> imgs = new HashMap<String, Image>();
-	public String Path = "C:\\Users\\seung\\Documents\\Git\\shortcut\\project\\";
 	public Image img = null;
 	private mpoint Size = new mpoint(50,50);
 	private mpoint Position = new mpoint(0,0);
@@ -27,7 +27,7 @@ public class GameDrawComponent extends JComponent{
 	public GameDrawComponent()
 	{
 		SetSize(new mpoint(0,0));
-		setToolTipText("AEE");
+		//setToolTipText("AEE");
 	}
 	
 	
@@ -36,7 +36,9 @@ public class GameDrawComponent extends JComponent{
 	{
 		if (!imgs.containsKey(key)) 
 		{
-			imgs.put(key, Toolkit.getDefaultToolkit().getImage(Path+key));
+			URL imageURL = getClass().getClassLoader().getResource(key);
+			
+			imgs.put(key, new ImageIcon(imageURL).getImage());
 		}
 		
 		img = imgs.get(key);
